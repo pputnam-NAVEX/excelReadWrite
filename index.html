@@ -1,0 +1,36 @@
+<head>
+
+</head>
+
+<body>
+    <h1>Excel Read/Write</h1>
+
+    <form action="">
+        <div>
+            <label for="">Select a spreadsheet</label>
+            <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+        </div>
+
+        <button type='submit'>Get Info</button>
+        <h1 id='duration'></h1>
+    </form>
+
+    <!-- not for production -->
+    <script>
+        document.querySelector('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const { path } = document.querySelector('input').files[0];
+            
+            
+            // sending to Electron ->
+            window.api.send("toMain", path);
+
+        });
+
+        // window.api.receive("fromMain", (data) => {
+        //     document.querySelector('#duration').innerHTML = `Your video length is ${data} seconds`;
+        //     console.log(`Received ${data} from main process`);
+        // });
+    </script>
+</body>
