@@ -34,7 +34,12 @@ ipcMain.on("toMain", (event, args) => {
     .xlsx
     .readFile(args)
     .then(() => {
-        console.log(workbook);
+        // console.log(workbook);
+        // console.log(workbook.worksheets[0]);
+        // console.log(workbook.worksheets[0].actualColumnCount);
+        // console.log(workbook.worksheets[0].getColumn('A'));
+        // console.log(workbook.worksheets[0].getCell('A1'));
+        console.log(workbook.worksheets[0].getColumn('C').values)
     });
     // workbook.xlsx.readFile(args);
     // console.log(workbook.getWorksheet(1));
