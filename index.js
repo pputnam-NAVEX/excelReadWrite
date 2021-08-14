@@ -53,11 +53,38 @@ ipcMain.on("toMain", (event, args) => {
                 console.log(workbook.worksheets[0].actualRowCount);
                 console.log("actualColumnCount:");
                 console.log(workbook.worksheets[0].actualColumnCount);
+                
+                let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
                 for (column in workbook.worksheets[0].getRow('1').values) {
                     if (workbook.worksheets[0].getRow('1').values[column] == "Data Privacy") {
                         console.log("True");
-                        break
+                        console.log("DP Column Values:");
+                        console.log(workbook.worksheets[0].getColumn(alphabet[column-1]).values);
+                        
+                        // iterate over all current cells in this column
+                        // dobCol.eachCell(function(cell, rowNumber) {
+                        //     // ...
+                        // });
+                        // dobCol.eachCell({ includeEmpty: true }, function(cell, rowNumber) {
+                        //     // ...
+                        //   });
+
+                        // for (data in workbook.worksheets[0].geColumn(column).values){
+                        //     let DPData = ["true","false","yes","no","y","n",true,false];
+                        //     var validData = false;
+                        //     for (value in DPData) {
+                        //         if (workbook.worksheets[0].geColumn[column].values[data] == DPData[value]) {
+                        //             validData = true;
+                        //         }
+                        //         if (validData) {
+                        //             break
+                        //         } else if (value == DPData-1 && !ValidData) {
+                        //             console.log("invalid data on row" + data);
+                        //         }
+                        //     }
+                        // }        
+                           
                     }
                 }
             });
