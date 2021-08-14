@@ -29,18 +29,49 @@ app.on("ready", createWindow);
 
 // receiving from and sending to index.html video file path variable
 ipcMain.on("toMain", (event, args) => {
+    console.log(args);
+    console.log(path.extname(args));
     const workbook = new ExcelJS.Workbook();
-    workbook
-    .xlsx
-    .readFile(args)
-    .then(() => {
-        // console.log(workbook);
-        // console.log(workbook.worksheets[0]);
-        // console.log(workbook.worksheets[0].actualColumnCount);
-        // console.log(workbook.worksheets[0].getColumn('A'));
-        // console.log(workbook.worksheets[0].getCell('A1'));
-        console.log(workbook.worksheets[0].getColumn('C').values)
-    });
+    switch (path.extname(args)) {
+        case ".xlsx":
+            workbook.xlsx.readFile(args).then(() => {
+                // console.log(workbook);
+                // console.log(workbook.worksheets[0]);
+                // console.log(workbook.worksheets[0].actualColumnCount);
+                // console.log(workbook.worksheets[0].getColumn('A'));
+                // console.log(workbook.worksheets[0].getCell('A1'));
+                console.log(workbook.worksheets[0].getColumn('C').values)
+            });
+            break
+        case ".csv":
+            workbook.csv.readFile(args).then(() => {
+                console.log("Column values:");
+                console.log(workbook.worksheets[0].getRow('1').values)
+                console.log("Row count:");
+                console.log(workbook.worksheets[0].rowCount);
+                console.log("Actual Row Count (does not count empty rows):");
+                console.log(workbook.worksheets[0].actualRowCount);
+                console.log("actualColumnCount:");
+                console.log(workbook.worksheets[0].actualColumnCount);
+
+                for (column in workbook.worksheets[0].getRow('1').values) {
+                    if (workbook.worksheets[0].getRow('1').values[column] == "Data Privacy") {
+                        console.log("True");
+                        break
+                    }
+                }
+            });
+            break
+        case ".xls":
+            workbook.xls.readFile(args).then(() => {
+                console.log(workbook.worksheets[0].getColumn('C').values)
+            });
+            break
+        default:
+            console.log("Not a spreadsheet maybe?")
+        
+        }
+        
     // workbook.xlsx.readFile(args);
     // console.log(workbook.getWorksheet(1));
     // const worksheet = workbook.getWorksheet('Sheet1');
