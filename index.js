@@ -45,48 +45,84 @@ ipcMain.on("toMain", (event, args) => {
             break
         case ".csv":
             workbook.csv.readFile(args).then(() => {
-                console.log("Column values:");
-                console.log(workbook.worksheets[0].getRow('1').values)
-                console.log("Row count:");
-                console.log(workbook.worksheets[0].rowCount);
-                console.log("Actual Row Count (does not count empty rows):");
-                console.log(workbook.worksheets[0].actualRowCount);
-                console.log("actualColumnCount:");
-                console.log(workbook.worksheets[0].actualColumnCount);
+                // console.log("Column (row 1) values:");
+                // console.log(workbook.worksheets[0].getRow('1').values)
+                // console.log("Row 1 in totality")
+                // console.log(workbook.worksheets[0].getRow('1'))
+                // console.log("Row count:");
+                // console.log(workbook.worksheets[0].rowCount);
+                // console.log("Actual Row Count (does not count empty rows):");
+                // console.log(workbook.worksheets[0].actualRowCount);
+                // console.log("actualColumnCount:");
+                // console.log(workbook.worksheets[0].actualColumnCount);
                 
                 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                let DPData = ["true","false","yes","no","y","n",true,false];
+                let rowOne = workbook.worksheets[0].getRow('1');
+              
+                // better way to iterate through row/columns
+                rowOne.eachCell(function(cell, colNumber) { 
+                    var validData = false;
 
-                for (column in workbook.worksheets[0].getRow('1').values) {
-                    if (workbook.worksheets[0].getRow('1').values[column] == "Data Privacy") {
-                        console.log("True");
-                        console.log("DP Column Values:");
-                        console.log(workbook.worksheets[0].getColumn(alphabet[column-1]).values);
-                        
-                        // iterate over all current cells in this column
-                        // dobCol.eachCell(function(cell, rowNumber) {
-                        //     // ...
-                        // });
-                        // dobCol.eachCell({ includeEmpty: true }, function(cell, rowNumber) {
-                        //     // ...
-                        //   });
-
-                        // for (data in workbook.worksheets[0].geColumn(column).values){
-                        //     let DPData = ["true","false","yes","no","y","n",true,false];
-                        //     var validData = false;
-                        //     for (value in DPData) {
-                        //         if (workbook.worksheets[0].geColumn[column].values[data] == DPData[value]) {
-                        //             validData = true;
-                        //         }
-                        //         if (validData) {
-                        //             break
-                        //         } else if (value == DPData-1 && !ValidData) {
-                        //             console.log("invalid data on row" + data);
-                        //         }
+                    if (cell.value == "Data Privacy") {
+                        console.log("cell.column************")
+                        console.log(cell.column);
+                        console.log('colNumber*************')
+                        console.log(colNumber);
+                        console.log('cell**************')
+                        console.log(cell);
+                        console.log('cell address***********')
+                        console.log(cell.address);
+                        console.log('cell ***********')
+                        // regex searches for the column letter(s) in the cell address
+                        console.log(cell.address.match(/^[A-Z]*[^0-9]/g))
+                        // for (value in DPData) {
+                        //     if (cell.value == DPData[value]) {
+                        //         validData = true;
+                        //         break
                         //     }
-                        // }        
-                           
+    
+                        //     if (validData) {
+                        //         break
+                        //     } else if (value == DPData.length-1 && !ValidData) {
+                        //         console.log("invalid data on row" + data);
+                        //     }
+                        // }
                     }
-                }
+
+                });
+
+                // for (column in workbook.worksheets[0].getRow('1').values) {
+                //     if (workbook.worksheets[0].getRow('1').values[column] == "Data Privacy") {
+                //         console.log("True");
+                //         console.log("DP Column Values:");
+                //         // console.log(workbook.worksheets[0].getColumn(alphabet[column-1]).values);
+                        
+                //         // iterate over all current cells in this column
+                //         // dobCol.eachCell(function(cell, rowNumber) {
+                //         //     // ...
+                //         // });
+                //         // dobCol.eachCell({ includeEmpty: true }, function(cell, rowNumber) {
+                //         //     // ...
+                //         //   });
+
+                //         for (data in workbook.worksheets[0].getColumn(alphabet[column-1]).values){
+                //             let DPData = ["true","false","yes","no","y","n",true,false];
+                //             var validData = false;
+                //             for (value in DPData) {
+                //                 if (workbook.worksheets[0].geColumn[column].values[data] == DPData[value]) {
+                //                     validData = true;
+                //                 }
+                //                 if (validData) {
+                //                     break
+                //                 } else if (value == DPData-1 && !ValidData) {
+                //                     console.log("invalid data on row" + data);
+                //                 }
+                //             }
+                //         }        
+                           
+                //     }
+                // }
             });
             break
         case ".xls":
