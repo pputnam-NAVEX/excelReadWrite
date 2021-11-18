@@ -32,6 +32,7 @@ ipcMain.on("toMain", (event, args) => {
     console.log(args);
     console.log(path.extname(args));
     const workbook = new ExcelJS.Workbook();
+    let response = 'empty';
     switch (path.extname(args)) {
         case ".xlsx":
             workbook.xlsx.readFile(args).then(() => {
@@ -103,7 +104,9 @@ ipcMain.on("toMain", (event, args) => {
                                 }
                             });
                         } else {
+                            response = 'Column is Empty';
                             console.log('Column is empty')
+                            win.webContents.send("fromMain", response);
                         }
 
                     }
@@ -151,13 +154,13 @@ ipcMain.on("toMain", (event, args) => {
         default:
             console.log("Not a spreadsheet maybe?")
         
-        }
+    }
         
     // workbook.xlsx.readFile(args);
     // console.log(workbook.getWorksheet(1));
     // const worksheet = workbook.getWorksheet('Sheet1');
     
     // console.log(workbook.properties);
-    // win.webContents.send("fromMain", data);
+    // win.webContents.send("fromMain", response);
         
 });

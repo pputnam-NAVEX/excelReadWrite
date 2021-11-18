@@ -4,7 +4,8 @@
   "description": "following tutorial on udemy",
   "main": "index.js",
   "scripts": {
-    "electron": "electron ."
+    "electron": "electron .",
+    "start": "electron ."
   },
   "author": "Philip Putnam",
   "license": "ISC",

@@ -9,7 +9,7 @@
 ,Bulgaria - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Bulgaria - Other Locations,,,Bulgaria,EMEA - Bulgaria,,Sitel,Other,EMEA,GEE,TRUE
 ,Bulgaria - Virtual,,Bulgaria - Virtual,Bulgaria - Virtual,,,Bulgaria,EMEA - Bulgaria,,Sitel,Virtual,EMEA,GEE,TRUE
 ,Sofia,,"55 Nikola Vapzarov blvd. Expo 2000, reception 3",Sofia,,,Bulgaria,EMEA - Bulgaria,,Sitel,Call Center,EMEA,GEE,TRUE
-,Varna,,"Varna (Mall), 9009 Varna,186 Vladislav Varnenchik blvd",Varna,,09009,Bulgaria,EMEA - Bulgaria,,Sitel,Call Center,EMEA,GEE,TRUE
+,Varna,,"Varna (Mall), 9009 Varna,186 Vladislav Varnenchik blvd",Varna,,9009,Bulgaria,EMEA - Bulgaria,,Sitel,Call Center,EMEA,GEE,TRUE
 ,Canada - Maxhubs,,Canada - Maxhubs,Canada - Maxhubs,,,Canada,North America - Canada,,Sitel,MAXhubs,North America,Northeast,TRUE
 ,Canada - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Canada - Other Locations,,,Canada,North America - Canada,,Sitel,Other,North America,Northeast,TRUE
 ,Canada - Virtual,,Canada - Virtual,Canada - Virtual,,,Canada,North America - Canada,,Sitel,Virtual,North America,Northeast,TRUE
@@ -42,7 +42,7 @@
 ,TARBES,,"Zone Tertiaire Téléport 2, Pyrénées Aéropole",JUILLAN,,65290,France,EMEA - France,,Acticall,Call Center,EMEA,FRM,TRUE
 ,TOUL,,"73, Rue Raymond Frénot, Pôle Industriel Toul Europe Secteur A",TOUL,,54200,France,EMEA - France,,Acticall,Call Center,EMEA,FRM,TRUE
 ,Troyes,,35 Rue Danton,Pont Sainte Marie,,10150,France,EMEA - France,,Sitel,Call Center,EMEA,FRM,TRUE
-,VERVINS,,"Ancienne Ecole Ceccaldi, Place Papillon",VERVINS,,02140,France,EMEA - France,,Acticall,Call Center,EMEA,FRM,TRUE
+,VERVINS,,"Ancienne Ecole Ceccaldi, Place Papillon",VERVINS,,2140,France,EMEA - France,,Acticall,Call Center,EMEA,FRM,TRUE
 ,WASQUEHAL,,ZAC du Grand Cottignies 10 et 12 rue Conrad Adenauer,WASQUEHAL,,59290,France,EMEA - France,,Acticall,Call Center,EMEA,FRM,TRUE
 ,Berlin,,"Niederlassung Berlin & Potsdam, Wohlrabedamm 32, 13629 Berlin, Germany",Berlin,,,Germany,EMEA - Germany,,Sitel,Call Center,EMEA,GEE,TRUE
 ,Dessau 1,,Unruhstr.1,Dessau,,,Germany,EMEA - Germany,,Sitel,Call Center,EMEA,GEE,TRUE
@@ -72,8 +72,8 @@
 ,Mexico - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Mexico - Other Locations,,,Mexico,LATAM - Mexico,,Sitel,Other,LATAM,Central America,TRUE
 ,Mexico - Virtual,,Mexico - Virtual,Mexico - Virtual,,,Mexico,LATAM - Mexico,,Sitel,Virtual,LATAM,Central America,TRUE
 ,San Pedro,,"Av. Vasconcelos # 130 oriente, colonia Santa Engracia, San Pedro Garza García",Monterrey,,,Mexico,LATAM - Mexico,,Sitel,Call Center,LATAM,Central America,TRUE
-,Casablanca,,Résidence les myrtilles 156 Bd Yacoub El Mansour,Casablanca,,02000,Morocco,EMEA - Morocco,,Sitel,Call Center,EMEA,North Africa,TRUE
-,Casanearshore,,"1100 Bd El Qods,Casanearshore Park, Sidi Maarouf",Casablanca,,02000,Morocco,EMEA - Morocco,,Acticall,Call Center,EMEA,North Africa,TRUE
+,Casablanca,,Résidence les myrtilles 156 Bd Yacoub El Mansour,Casablanca,,2000,Morocco,EMEA - Morocco,,Sitel,Call Center,EMEA,North Africa,TRUE
+,Casanearshore,,"1100 Bd El Qods,Casanearshore Park, Sidi Maarouf",Casablanca,,2000,Morocco,EMEA - Morocco,,Acticall,Call Center,EMEA,North Africa,TRUE
 ,Fès,,"Park Fès Shore, Rte Sidi Hrazem Fès",Fez,,30000,Morocco,EMEA - Morocco,,Acticall,Call Center,EMEA,North Africa,TRUE
 ,Fès BoT,,"Park Fès Shore, Rte Sidi Hrazem Fès",Fez,,30000,Morocco,EMEA - Morocco,,Acticall,Call Center,EMEA,North Africa,TRUE
 ,Morocco - Maxhubs,,Morocco - Maxhubs,Morocco - Maxhubs,,,Morocco,EMEA - Morocco,,Sitel,MAXhubs,EMEA,North Africa,TRUE
@@ -83,13 +83,13 @@
 ,Rabat Arribat Center,,"Arribat Center, Avenue Inaouin",Rabat,,10106,Morocco,EMEA - Morocco,,Sitel,Call Center,EMEA,North Africa,TRUE
 ,Rabat City Center,,"5, Rue Sanaa, Quartier Hassan, CP 10020, Rabat, Moroc",Rabat,,10106,Morocco,EMEA - Morocco,,Sitel,Call Center,EMEA,North Africa,TRUE
 ,Almelo,,Twenthe-plein 11,Almelo,,,Netherlands,EMEA - Netherlands,,Sitel,Call Center,EMEA,BENN,TRUE
-,Eindhoven,,"Tormentil 1, 5684 PK Best",Eindhoven,,05684,Netherlands,EMEA - Netherlands,,Sitel,Call Center,EMEA,BENN,TRUE
+,Eindhoven,,"Tormentil 1, 5684 PK Best",Eindhoven,,5684,Netherlands,EMEA - Netherlands,,Sitel,Call Center,EMEA,BENN,TRUE
 ,Nethelands - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Nethelands - Other Locations,,,Netherlands,EMEA - Netherlands,,Sitel,Other,EMEA,BENN,TRUE
 ,Netherlands - Maxhubs,,Netherlands - Maxhubs,Netherlands - Maxhubs,,,Netherlands,EMEA - Netherlands,,Sitel,MAXhubs,EMEA,BENN,TRUE
 ,Netherlands - Virtual,,Netherlands - Virtual,Netherlands - Virtual,,,Netherlands,EMEA - Netherlands,,Sitel,Virtual,EMEA,BENN,TRUE
 ,New Zealand - Maxhubs,,New Zealand - Maxhubs,New Zealand - Maxhubs,,,New Zealand,Asia Pacific - New Zealand,,Sitel,MAXhubs,Asia Pacific,ANZ,TRUE
 ,New Zealand - Virtual,,New Zealand - Virtual,New Zealand - Virtual,,,New Zealand,Asia Pacific - New Zealand,,Sitel,Virtual,EMEA,ANZ,TRUE
-,Onehunga,,"Level 1, 8 Gloucester Park Rd",Auckland,,01061,New Zealand,Asia Pacific - New Zealand,,Sitel,Call Center,Asia Pacific,ANZ,TRUE
+,Onehunga,,"Level 1, 8 Gloucester Park Rd",Auckland,,1061,New Zealand,Asia Pacific - New Zealand,,Sitel,Call Center,Asia Pacific,ANZ,TRUE
 ,Managua - Embassy,,Km 4.5 Carretera Sur. Frente a INISER.,Managua,,,Nicaragua,LATAM - Nicaragua,,Sitel,Call Center,LATAM,Central America,TRUE
 ,Managua - Invercasa,,Centro de Convenciones Invercasa. 3ero y 6to Piso.,Managua,,,Nicaragua,LATAM - Nicaragua,,Sitel,Call Center,LATAM,Central America,TRUE
 ,Nicaragua - Maxhubs,,Nicaragua - Maxhubs,Nicaragua - Maxhubs,,,Nicaragua,LATAM - Nicaragua,,Sitel,MAXhubs,LATAM,Central America,TRUE
@@ -100,21 +100,21 @@
 ,Panama - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Panama - Other Locations,,,Panama,LATAM - Panama,,Sitel,Other,LATAM,Central America,TRUE
 ,Panama - Virtual,,Panama - Virtual,Panama - Virtual,,,Panama,LATAM - Panama,,Sitel,Virtual,LATAM,Central America,TRUE
 ,Sitel Plaza,,"Vía Fernandez de Córdoba, Vista  Hermosa, Pueblo Nuevo, District and Province of Panama",Panama City,,,Panama,LATAM - Panama,,Sitel,Call Center,LATAM,Central America,TRUE
-,Baguio Cyber,,"SM Cyber Baguio Annex Building, Upper Harrison Road, Baguio City",Baguio City,Benguet,02600,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Baguio Site 1,,"Infocel Building, (BCEZ) Loakan Road",Baguio City,Benguet,02600,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Baguio Site 2,,"Standard Factory Building 2, (PEZA) Loakan Road",Baguio City,Benguet,02600,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Baguio Site 3,,"Panorama Bldng, Baguio City Economic Zone Auth. Loakan Road",Baguio City,Benguet,02600,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Eton,,"2F Buildings 3, Eton Cyberpod Corinthian, Edsa corner Ortigas Ave.","Barrio Ugong Norte, Quezon City",NCR,01110,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,One Julia Vargas (OJV),,"Ortigas Home Depot Complex, One Julia Vargas Ave. Ortigas, Pasig City, Barrio Ugong, Pasig City",Pasig City,NCR,01604,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Baguio Cyber,,"SM Cyber Baguio Annex Building, Upper Harrison Road, Baguio City",Baguio City,Benguet,2600,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Baguio Site 1,,"Infocel Building, (BCEZ) Loakan Road",Baguio City,Benguet,2600,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Baguio Site 2,,"Standard Factory Building 2, (PEZA) Loakan Road",Baguio City,Benguet,2600,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Baguio Site 3,,"Panorama Bldng, Baguio City Economic Zone Auth. Loakan Road",Baguio City,Benguet,2600,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Eton,,"2F Buildings 3, Eton Cyberpod Corinthian, Edsa corner Ortigas Ave.","Barrio Ugong Norte, Quezon City",NCR,1110,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,One Julia Vargas (OJV),,"Ortigas Home Depot Complex, One Julia Vargas Ave. Ortigas, Pasig City, Barrio Ugong, Pasig City",Pasig City,NCR,1604,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
 ,Philippines - Maxhubs,,Philippines - Maxhubs,Philippines - Maxhubs,Other,,Philippines,Asia Pacific - Philippines,,Sitel,MAXhubs,Asia Pacific,Philippines,TRUE
 ,Philippines - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Philippines - Other Locations,Other,,Philippines,Asia Pacific - Philippines,,Sitel,Other,Asia Pacific,Philippines,TRUE
 ,Philippines - Virtual,,Philippines - Virtual,Philippines - Virtual,Other,,Philippines,Asia Pacific - Philippines,,Sitel,Virtual,Asia Pacific,Philippines,TRUE
-,Pioneer 1,,"16F Cyber Gate Tower 1, Robinson's Pioneer","Mandaluyong City, Metro Manila",NCR,01554,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Pioneer 2,,12th floor Robinson Cybergate Plaza Edsa Corner Pioneer,"Mandaluyong City, Metro Manila",NCR,01554,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Puerto Princesa,,"GF-3F-EastVille City Walk Bgy. Pedro Puerto Princesa City, Palawan Province, Philippines.",Puerto Princesa City,Palawan,05300,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Tarlac,,"Robinsons Luisita, Mc Arthur Highway, San Miguel",Tarlac City,Tarlac,02300,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Tarlac 3,,"Robinsons Luisita, Mc Arthur Highway, San Miguel",Tarlac City,Tarlac,02300,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
-,Technopoint,,"Technopoint Building, Julia Vargas Ave., Barrio Ugong, Pasig City",Pasig City,NCR,01604,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Pioneer 1,,"16F Cyber Gate Tower 1, Robinson's Pioneer","Mandaluyong City, Metro Manila",NCR,1554,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Pioneer 2,,12th floor Robinson Cybergate Plaza Edsa Corner Pioneer,"Mandaluyong City, Metro Manila",NCR,1554,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Puerto Princesa,,"GF-3F-EastVille City Walk Bgy. Pedro Puerto Princesa City, Palawan Province, Philippines.",Puerto Princesa City,Palawan,5300,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Tarlac,,"Robinsons Luisita, Mc Arthur Highway, San Miguel",Tarlac City,Tarlac,2300,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Tarlac 3,,"Robinsons Luisita, Mc Arthur Highway, San Miguel",Tarlac City,Tarlac,2300,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Technopoint,,"Technopoint Building, Julia Vargas Ave., Barrio Ugong, Pasig City",Pasig City,NCR,1604,Philippines,Asia Pacific - Philippines,,Sitel,Call Center,Asia Pacific,Philippines,TRUE
 ,Poland - Maxhubs,,Poland - Maxhubs,Poland - Maxhubs,,,Poland,EMEA - Poland,,Sitel,MAXhubs,EMEA,GEE,TRUE
 ,Poland - Virtual,,Poland - Virtual,Poland - Virtual,,,Poland,EMEA - Poland,,Sitel,Virtual,EMEA,GEE,TRUE
 ,Warsaw,,"Woloska -7 Mars Building, Entry D, 02-675",Warsaw,,,Poland,EMEA - Poland,,Sitel,Call Center,EMEA,GEE,TRUE
@@ -153,7 +153,7 @@
 ,United Kingdom - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",United Kingdom - Other Locations,,,United Kingdom,EMEA - UK,,Sitel,Other,EMEA,UKIN,TRUE
 ,United Kingdom - Virtual,,United Kingdom - Virtual,United Kingdom - Virtual,,,United Kingdom,EMEA - UK,,Sitel,Virtual,EMEA,UKIN,TRUE
 ,Augusta,,2115 Windsor Springs Road Suite #1,Augusta,GA,,United States,North America - USA,,Sitel,Call Center,North America,Southeast,TRUE
-,Caribou,,63 Sweden St,Caribou,ME,04736,United States,North America - USA,,Sitel,Call Center,North America,Northeast,TRUE
+,Caribou,,63 Sweden St,Caribou,ME,4736,United States,North America - USA,,Sitel,Call Center,North America,Northeast,TRUE
 ,Corning,,101 Canada Road,Painted Post,NY,,United States,North America - USA,,Sitel,Call Center,North America,Northeast,TRUE
 ,Fishers,,"999 E. 121st Street, Fishers, Indiana",Indiana,IN,46037,United States,North America - USA,,Sitel,Call Center,North America,Mid-West,TRUE
 ,Glasgow,,101 Hilltopper Way,Glasgow,KY,,United States,North America - USA,,Sitel,Call Center,North America,Southeast,TRUE
