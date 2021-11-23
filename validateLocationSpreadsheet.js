@@ -1,3 +1,4 @@
+const { Debugger } = require('electron');
 const ExcelJS = require('exceljs');
 const path = require("path");
 

@@ -1,9 +1,9 @@
 const electron = require('electron');
-const ExcelJS = require('exceljs');
 const { app, BrowserWindow, ipcMain } = electron;
 const path = require("path");
-const fs = require("fs");
+// const fs = require("fs");
 const validateLocationSpreadsheet = require('./validateLocationSpreadsheet');
+const getWorkbook = require('./validateFile/validateFile')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -30,5 +30,6 @@ app.on("ready", createWindow);
 
 // receiving from and sending to index.html video file path variable
 ipcMain.on("toMain", (event, args) => {
-    let DPspreadsheet = validateLocationSpreadsheet.dataPrivacyColumn(args, win);
+    validateLocationSpreadsheet.dataPrivacyColumn(args, win);
+    getWorkbook.getWorkbook(args);
 });
