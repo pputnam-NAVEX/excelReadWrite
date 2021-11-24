@@ -20,19 +20,23 @@ const validateLDBFields = function(fieldName) {
 }
 
 const deleteLocations = function(worksheet) {
+    console.log(worksheet.getColumn("Add/Edit/Delete").values);
     worksheet.getColumn("Add/Edit/Delete").eachCell(function(cell, rowNumber) {
+        
         if (cell.value == "delete") {
             console.log("Removing row " + rowNumber);
             worksheet.spliceRows(rowNumber, 1);
         }
     });
+    console.log(worksheet.getColumn("Add/Edit/Delete").values);
 }
-// WHY ARE ADD and EDIT missing from the csv write?!
+
 const getWorkbook = async function(args) {
     const workbook2 = new ExcelJS.Workbook();
-    const worksheet = await workbook2.csv.readFile(args);
-    // console.log(worksheet);
-    console.log(worksheet.getRow(138).values);
+    const options = { encoding: 'UTF-8' };
+    const worksheet = await workbook2.csv.readFile(args, options);
+    console.log(worksheet);
+    console.log(worksheet.getCell('A1').value);
     let columnsUnreal = worksheet.columnCount;
     console.log(columnsUnreal);
 
@@ -65,7 +69,11 @@ const getWorkbook = async function(args) {
     });
     // some encoding issues when spitting out or writing data, long hyphens are an example
     // only on the write though, they console.log fine....(from what I've tested)
-    // workbook2.csv.writeFile("newLDBspreadsheet.csv");
+    // console.log(worksheet.getColumn("Add/Edit/Delete").values);
+    // ENCODE errors only seem to happen opening with Excel?!?! Notepad++ does just fine UTF-8!
+    // When looking at Notepad++, difference seems to be UTF-8-BOM (Byte order mark) vs UTF-8 and perhaps Windows (CR LF) vs Unix LF. Using Notepad++ to change encoding to UTF-8-BOM makes the spreadsheet encode correctly.
+    worksheet.getCell('A1').value = "\ufeff" + worksheet.getCell('A1').value; // !!! THIS IS FOR UTF-8-BOM!!!
+    workbook2.csv.writeFile("newLDBspreadsheet.csv", options);
 
     // if (row.getCell(1) == 'delete') {
     //     console.log(row.getCell(1).address);
