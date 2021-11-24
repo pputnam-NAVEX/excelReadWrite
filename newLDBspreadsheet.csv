@@ -1,0 +1,169 @@
+Add/Edit/Delete,Name,Branch,Address 1,City,State,Zip,Country,Tier Name,Data Privacy,Custom Field 1,Custom Field 2,Custom Field 3,Custom Field 4,,empty
+,Australia - Maxhubs,,Australia - Maxhubs,Australia - Maxhubs,,,Australia,Asia Pacific - Australia,,Sitel,MAXhubs,Asia Pacific,Australia,TRUE
+,Australia - Virtual,,Australia - Virtual,Australia - Virtual,,,Australia,Asia Pacific - Australia,,Sitel,Virtual,Asia Pacific,Australia,TRUE,,,asdf
+,Barra Funda,,Rua Achilles Orlando Curtolo 499 - Barra Funda,Sao Paulo,,01144-080,Brazil,LATAM - Brazil,,Sitel,Call Center,LATAM,South America,TRUE
+,Brazil - Maxhubs,,Brazil - Maxhubs,Brazil - Maxhubs,,,Brazil,LATAM - Brazil,TRUE,Sitel,MAXhubs,LATAM,South America,TRUE
+,Brazil - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Brazil - Other Locations,,,Brazil,LATAM - Brazil,FALSE,Sitel,Other,LATAM,South America,TRUE
+,Brazil - Virtual,,Brazil - Virtual,Brazil - Virtual,,,Brazil,LATAM - Brazil,FALSE,Sitel,Virtual,LATAM,South America,TRUE
+,Bulgaria - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Bulgaria - Other Locations,,,Bulgaria,EMEA - Bulgaria,FALSE,Sitel,Other,EMEA,GEE,TRUE
+,Bulgaria - Virtual,,Bulgaria - Virtual,Bulgaria - Virtual,,,Bulgaria,EMEA - Bulgaria,FALSE,Sitel,Virtual,EMEA,GEE,TRUE
+,Sofia,,"55 Nikola Vapzarov blvd. Expo 2000, reception 3",Sofia,,,Bulgaria,EMEA - Bulgaria,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Varna,,"Varna (Mall), 9009 Varna,186 Vladislav Varnenchik blvd",Varna,,9009,Bulgaria,EMEA - Bulgaria,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Canada - Maxhubs,,Canada - Maxhubs,Canada - Maxhubs,,,Canada,North America - Canada,FALSE,Sitel,MAXhubs,North America,Northeast,TRUE
+,Canada - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Canada - Other Locations,,,Canada,North America - Canada,FALSE,Sitel,Other,North America,Northeast,TRUE
+,Canada - Virtual,,Canada - Virtual,Canada - Virtual,,,Canada,North America - Canada,FALSE,Sitel,Virtual,North America,Northeast,TRUE
+,St Catharines,,333 Ontario St,St Catharines,ON,,Canada,North America - Canada,FALSE,Sitel,Call Center,North America,Northeast,TRUE
+,St. John,,"120 McDonald St, Saint John",Saint John,NB,,Canada,North America - Canada,FALSE,Sitel,Call Center,North America,Northeast,TRUE
+,Cali Colombia,,CALLE 22 N # 2N 60 Barrio PILOTO,Cali,,,Colombia,LATAM - Colombia,FALSE,Sitel,Call Center,LATAM,South America,TRUE
+,Calle 143,,Calle 143 No 45 50 Bogota colombia,Bogota,,,Colombia,LATAM - Colombia,FALSE,Sitel,Call Center,LATAM,South America,TRUE
+,Calle 165,,Calle 165 No 45-46 Piso 4,Bogota,,,Colombia,LATAM - Colombia,FALSE,Sitel,Call Center,LATAM,South America,TRUE
+,Colombia - Maxhubs,,Colombia - Maxhubs,Colombia - Maxhubs,,,Colombia,LATAM - Colombia,FALSE,Sitel,MAXhubs,LATAM,South America,TRUE
+,Colombia - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Colombia - Other Locations,,,Colombia,LATAM - Colombia,USA,Sitel,Other,LATAM,South America,TRUE
+,Colombia - Virtual,,Colombia - Virtual,Colombia - Virtual,,,Colombia,LATAM - Colombia,FALSE,Sitel,Virtual,EMEA,South America,TRUE
+,Copenhagen,,"Sluseholmen 2, 2450 København",Copenhagen,,,Denmark,EMEA - Denmark,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,Denmark - Maxhubs,,Denmark - Maxhubs,Denmark - Maxhubs,,,Denmark,EMEA - Denmark,FALSE,Sitel,MAXhubs,EMEA,UKIN,TRUE
+,Denmark - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Denmark - Other Locations,,,Denmark,EMEA - Denmark,FALSE,Sitel,Other,EMEA,BENN,TRUE
+,Denmark - Virtual,,Denmark - Virtual,Denmark - Virtual,,,Denmark,EMEA - Denmark,FALSE,Sitel,Virtual,EMEA,BENN
+,Sonderborg,,"Damvang 2, 6400 Sønderborg, Denmark",Sønderborg,,,Denmark,EMEA - Denmark,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,BLOIS,,"ZAC des Guignières, 21 rue des Arches,BP 4321",BLOIS,,41043,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,CLERMONT-FERRAND,,"Le Copernic, Zone de Bois Joli",COURNON D'AUVERGNE,,63800,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,France - Maxhubs,,France - Maxhubs,France - Maxhubs,,,France,EMEA - France,FALSE,Sitel,MAXhubs,EMEA,FRM,TRUE
+,France - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers, any new sites or any other Sitel Group offices",France - Other Locations,,,France,EMEA - France,FALSE,Sitel,Other,EMEA,FRM,TRUE
+,La Rochelle,,ZI des 4 Chevaliers,Perigny,,,France,EMEA - France,FALSE,Sitel,Call Center,EMEA,FRM,TRUE
+,NANCY,,"Stanilas Plaza, 16/18 Boulevard de la Mothe",NANCY,,54000,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,PARIS HAUSSMANN,,50/52 Boulevard Haussmann,PARIS,,75009,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,PAU,,"Pau Cité Multimédia, 1 rue Ada Byron",PAU,,64000,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,ROMAINVILLE,,"Quadrium Nord -, 4ème étage, 110 Avenue Gaston Roussel",ROMAINVILLE,,93230,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,ROUEN,,R2-R3 - 12 rue Ernest Renan CS71002,SAINT ETIENNE DU ROUVRAY,,76801,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,SAINT-ETIENNE,,Parc Technologique Métrotech Domaine du Colombier,ST JEAN BONNEFOND,,42650,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,TARBES,,"Zone Tertiaire Téléport 2, Pyrénées Aéropole",JUILLAN,,65290,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,TOUL,,"73, Rue Raymond Frénot, Pôle Industriel Toul Europe Secteur A",TOUL,,54200,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,Troyes,,35 Rue Danton,Pont Sainte Marie,,10150,France,EMEA - France,FALSE,Sitel,Call Center,EMEA,FRM,TRUE
+,VERVINS,,"Ancienne Ecole Ceccaldi, Place Papillon",VERVINS,,2140,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,WASQUEHAL,,ZAC du Grand Cottignies 10 et 12 rue Conrad Adenauer,WASQUEHAL,,59290,France,EMEA - France,FALSE,Acticall,Call Center,EMEA,FRM,TRUE
+,Berlin,,"Niederlassung Berlin & Potsdam, Wohlrabedamm 32, 13629 Berlin, Germany",Berlin,,,Germany,EMEA - Germany,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Dessau 1,,Unruhstr.1,Dessau,,,Germany,EMEA - Germany,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Dusseldorf,,Muensterstr. 100,Dusseldorf,,,Germany,EMEA - Germany,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Germany - Maxhubs,,Germany - Maxhubs,Germany - Maxhubs,,,Germany,EMEA - Germany,FALSE,Sitel,MAXhubs,EMEA,GEE,TRUE
+,Germany - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Germany - Other Locations,,,Germany,EMEA - Germany,FALSE,Sitel,Other,EMEA,GEE,TRUE
+,Germany - Virtual,,Germany - Virtual,Germany - Virtual,,,Germany,EMEA - Germany,FALSE,Sitel,Virtual,EMEA,GEE,TRUE
+,Krefeld A17,,Europark Fichtenhain A 17,Krefeld,,,Germany,EMEA - Germany,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Magdeburg,,Halberstädter Str. 40 - 42,Magdeburg,,39112,Germany,EMEA - Germany,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Potsdam,,Zeppelinstraße 48B,Potsdam,,14471,Germany,EMEA - Germany,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Wittenberg,,"Friedrichstrabe 126, 06886, Lutherstadt, Wittenberg",Lutherstadt-Wittenberg,,,Germany,EMEA - Germany,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Athens,,"Capitol Building, 74-78, 3rd September str., 33-35 Ioulianou str. & Patission str.",Athens,,10434,Greece,EMEA - Greece,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Greece - Maxhubs,,Greece - Maxhubs,Greece - Maxhubs,,,Greece,EMEA - Greece,FALSE,Sitel,MAXhubs,EMEA,GEE,TRUE
+,Greece – Virtual,,Greece – Virtual,Greece – Virtual,,,Greece,EMEA - Greece,FALSE,Sitel,Virtual,EMEA,GEE,TRUE
+,Chennai,,"Block C, 1st Floor, Hardy Tower, Ramanujan IT SEZ, Rajiv Gandhi Salai (OMR), Taramani",Chennai,,600113,India,Asia Pacific - India,FALSE,Sitel,Call Center,Asia Pacific,India,TRUE
+,Hyderabad,,"Unit No - 02, Block II Cyber Pearl, Hitec City, Madhapur",Hyderabad,,500081,India,Asia Pacific - India,FALSE,Sitel,Call Center,Asia Pacific,India,TRUE
+,India - Maxhubs,,India - Maxhubs,India - Maxhubs,,,India,Asia Pacific - India,FALSE,Sitel,MAXhubs,Asia Pacific,India,TRUE
+,India - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",India - Other Locations,,,India,Asia Pacific - India,FALSE,Sitel,Other,Asia Pacific,India,TRUE
+,India - Virtual,,India - Virtual,India - Virtual,,,India,Asia Pacific - India,FALSE,Sitel,Virtual,EMEA,India,TRUE
+,Mumbai,,"501,BOOMERANG, 5th Floor, CHANDIVALI FARM ROAD, ANDHERI ('E)",Mumbai,,400072,India,Asia Pacific - India,FALSE,Sitel,Call Center,Asia Pacific,India,TRUE
+,Ireland - Maxhubs,,Ireland - Maxhubs,Ireland - Maxhubs,,,Ireland,EMEA - Ireland,FALSE,Sitel,MAXhubs,EMEA,UKIN,TRUE
+,Ireland - Virtual or Client Sites,,Ireland - Virtual or Client Sites,Ireland - Virtual or Client Sites,,,Ireland,EMEA - UK,FALSE,Sitel,Virtual,EMEA,UKIN,TRUE
+,Italy - Maxhubs,,Italy - Maxhubs,Italy - Maxhubs,,,Italy,EMEA - Italy,FALSE,Sitel,MAXhubs,EMEA,SPI,TRUE
+,Ireland - Virtual or Client Sites,,Ireland - Virtual or Client Sites,Ireland - Virtual or Client Sites,,,Italy,EMEA - Italy,FALSE,Sitel,Virtual,EMEA,SPI,TRUE
+,Mexico - Maxhubs,,Mexico - Maxhubs,Mexico - Maxhubs,,,Mexico,LATAM - Mexico,FALSE,Sitel,MAXhubs,LATAM,Central America,TRUE
+,Mexico - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Mexico - Other Locations,,,Mexico,LATAM - Mexico,FALSE,Sitel,Other,LATAM,Central America,TRUE
+,Mexico - Virtual,,Mexico - Virtual,Mexico - Virtual,,,Mexico,LATAM - Mexico,FALSE,Sitel,Virtual,LATAM,Central America,TRUE
+,San Pedro,,"Av. Vasconcelos # 130 oriente, colonia Santa Engracia, San Pedro Garza García",Monterrey,,,Mexico,LATAM - Mexico,FALSE,Sitel,Call Center,LATAM,Central America,TRUE
+,Casablanca,,Résidence les myrtilles 156 Bd Yacoub El Mansour,Casablanca,,2000,Morocco,EMEA - Morocco,FALSE,Sitel,Call Center,EMEA,North Africa,TRUE
+,Casanearshore,,"1100 Bd El Qods,Casanearshore Park, Sidi Maarouf",Casablanca,,2000,Morocco,EMEA - Morocco,FALSE,Acticall,Call Center,EMEA,North Africa,TRUE
+,Fès,,"Park Fès Shore, Rte Sidi Hrazem Fès",Fez,,30000,Morocco,EMEA - Morocco,FALSE,Acticall,Call Center,EMEA,North Africa,TRUE
+,Fès BoT,,"Park Fès Shore, Rte Sidi Hrazem Fès",Fez,,30000,Morocco,EMEA - Morocco,FALSE,Acticall,Call Center,EMEA,North Africa,TRUE
+,Morocco - Maxhubs,,Morocco - Maxhubs,Morocco - Maxhubs,,,Morocco,EMEA - Morocco,FALSE,Sitel,MAXhubs,EMEA,North Africa,TRUE
+,Morocco - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Morocco - Other Locations,,,Morocco,EMEA - Morocco,FALSE,Sitel,Other,EMEA,North Africa,TRUE
+,Morocco - Virtual,,Morocco - Virtual,Morocco - Virtual,,,Morocco,EMEA - Morocco,FALSE,Sitel,Virtual,EMEA,North Africa,TRUE
+,Rabat Agdal,,"32 Avenue Oqba, Place Ibn Yassine, Agdal",Rabat,,10106,Morocco,EMEA - Morocco,FALSE,Sitel,Call Center,EMEA,North Africa,TRUE
+,Rabat Arribat Center,,"Arribat Center, Avenue Inaouin",Rabat,,10106,Morocco,EMEA - Morocco,FALSE,Sitel,Call Center,EMEA,North Africa,TRUE
+,Rabat City Center,,"5, Rue Sanaa, Quartier Hassan, CP 10020, Rabat, Moroc",Rabat,,10106,Morocco,EMEA - Morocco,FALSE,Sitel,Call Center,EMEA,North Africa,TRUE
+,Almelo,,Twenthe-plein 11,Almelo,,,Netherlands,EMEA - Netherlands,FALSE,Sitel,Call Center,EMEA,BENN,TRUE
+,Eindhoven,,"Tormentil 1, 5684 PK Best",Eindhoven,,5684,Netherlands,EMEA - Netherlands,FALSE,Sitel,Call Center,EMEA,BENN,TRUE
+,Nethelands - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Nethelands - Other Locations,,,Netherlands,EMEA - Netherlands,FALSE,Sitel,Other,EMEA,BENN,TRUE
+,Netherlands - Maxhubs,,Netherlands - Maxhubs,Netherlands - Maxhubs,,,Netherlands,EMEA - Netherlands,FALSE,Sitel,MAXhubs,EMEA,BENN,TRUE
+,Netherlands - Virtual,,Netherlands - Virtual,Netherlands - Virtual,,,Netherlands,EMEA - Netherlands,FALSE,Sitel,Virtual,EMEA,BENN,TRUE
+,New Zealand - Maxhubs,,New Zealand - Maxhubs,New Zealand - Maxhubs,,,New Zealand,Asia Pacific - New Zealand,FALSE,Sitel,MAXhubs,Asia Pacific,ANZ,TRUE
+,New Zealand - Virtual,,New Zealand - Virtual,New Zealand - Virtual,,,New Zealand,Asia Pacific - New Zealand,FALSE,Sitel,Virtual,EMEA,ANZ,TRUE
+,Onehunga,,"Level 1, 8 Gloucester Park Rd",Auckland,,1061,New Zealand,Asia Pacific - New Zealand,FALSE,Sitel,Call Center,Asia Pacific,ANZ,TRUE
+,Managua - Embassy,,Km 4.5 Carretera Sur. Frente a INISER.,Managua,,,Nicaragua,LATAM - Nicaragua,FALSE,Sitel,Call Center,LATAM,Central America,TRUE
+,Managua - Invercasa,,Centro de Convenciones Invercasa. 3ero y 6to Piso.,Managua,,,Nicaragua,LATAM - Nicaragua,FALSE,Sitel,Call Center,LATAM,Central America,TRUE
+,Nicaragua - Maxhubs,,Nicaragua - Maxhubs,Nicaragua - Maxhubs,,,Nicaragua,LATAM - Nicaragua,FALSE,Sitel,MAXhubs,LATAM,Central America,TRUE
+,Nicaragua - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Nicaragua - Other Locations,,,Nicaragua,LATAM - Nicaragua,FALSE,Sitel,Other,LATAM,Central America,TRUE
+,Nicaragua - Virtual,,Nicaragua Virtual,Managua,,,Nicaragua,LATAM - Nicaragua,FALSE,Sitel,Call Center,LATAM,Central America,TRUE
+,Nicaragua - Virtual,,Nicaragua - Virtual,Nicaragua - Virtual,,,Nicaragua,LATAM - Nicaragua,FALSE,Sitel,Virtual,LATAM,South America,TRUE
+,Panama - Maxhubs,,Panama - Maxhubs,Panama - Maxhubs,,,Panama,LATAM - Panama,FALSE,Sitel,MAXhubs,LATAM,Central America,TRUE
+,Panama - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Panama - Other Locations,,,Panama,LATAM - Panama,FALSE,Sitel,Other,LATAM,Central America,TRUE
+,Panama - Virtual,,Panama - Virtual,Panama - Virtual,,,Panama,LATAM - Panama,FALSE,Sitel,Virtual,LATAM,Central America,TRUE
+,Sitel Plaza,,"Vía Fernandez de Córdoba, Vista  Hermosa, Pueblo Nuevo, District and Province of Panama",Panama City,,,Panama,LATAM - Panama,FALSE,Sitel,Call Center,LATAM,Central America,TRUE
+,Baguio Cyber,,"SM Cyber Baguio Annex Building, Upper Harrison Road, Baguio City",Baguio City,Benguet,2600,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Baguio Site 1,,"Infocel Building, (BCEZ) Loakan Road",Baguio City,Benguet,2600,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Baguio Site 2,,"Standard Factory Building 2, (PEZA) Loakan Road",Baguio City,Benguet,2600,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Baguio Site 3,,"Panorama Bldng, Baguio City Economic Zone Auth. Loakan Road",Baguio City,Benguet,2600,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Eton,,"2F Buildings 3, Eton Cyberpod Corinthian, Edsa corner Ortigas Ave.","Barrio Ugong Norte, Quezon City",NCR,1110,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,One Julia Vargas (OJV),,"Ortigas Home Depot Complex, One Julia Vargas Ave. Ortigas, Pasig City, Barrio Ugong, Pasig City",Pasig City,NCR,1604,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Philippines - Maxhubs,,Philippines - Maxhubs,Philippines - Maxhubs,Other,,Philippines,Asia Pacific - Philippines,FALSE,Sitel,MAXhubs,Asia Pacific,Philippines,TRUE
+,Philippines - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Philippines - Other Locations,Other,,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Other,Asia Pacific,Philippines,TRUE
+,Philippines - Virtual,,Philippines - Virtual,Philippines - Virtual,Other,,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Virtual,Asia Pacific,Philippines,TRUE
+,Pioneer 1,,"16F Cyber Gate Tower 1, Robinson's Pioneer","Mandaluyong City, Metro Manila",NCR,1554,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Pioneer 2,,12th floor Robinson Cybergate Plaza Edsa Corner Pioneer,"Mandaluyong City, Metro Manila",NCR,1554,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Puerto Princesa,,"GF-3F-EastVille City Walk Bgy. Pedro Puerto Princesa City, Palawan Province, Philippines.",Puerto Princesa City,Palawan,5300,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Tarlac,,"Robinsons Luisita, Mc Arthur Highway, San Miguel",Tarlac City,Tarlac,2300,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Tarlac 3,,"Robinsons Luisita, Mc Arthur Highway, San Miguel",Tarlac City,Tarlac,2300,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Technopoint,,"Technopoint Building, Julia Vargas Ave., Barrio Ugong, Pasig City",Pasig City,NCR,1604,Philippines,Asia Pacific - Philippines,FALSE,Sitel,Call Center,Asia Pacific,Philippines,TRUE
+,Poland - Maxhubs,,Poland - Maxhubs,Poland - Maxhubs,,,Poland,EMEA - Poland,FALSE,Sitel,MAXhubs,EMEA,GEE,TRUE
+,Poland - Virtual,,Poland - Virtual,Poland - Virtual,,,Poland,EMEA - Poland,FALSE,Sitel,Virtual,EMEA,GEE,TRUE
+,Warsaw,,"Woloska -7 Mars Building, Entry D, 02-675",Warsaw,,,Poland,EMEA - Poland,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,Lisbon 7 Rios,,"Avenida José Malhoa 19, 1070-040 Lisboa,  Portugal",Lisbon,,1070-40,Portugal,EMEA - Portugal,FALSE,Sitel,Call Center,EMEA,SPI,TRUE
+,Lisbon Atlantic,,"Av. D Joao II, Edificio Central Office, nº 45 - 3º Andar",Lisbon,,900-084,Portugal,EMEA - Portugal,FALSE,Sitel,Call Center,EMEA,SPI,TRUE
+,Lisbon Santos,,"Edifício D. Luís I nº7-7C, Rua do Instituto Industrial",Lisbon,,1200-869,Portugal,EMEA - Portugal,FALSE,Sitel,Call Center,EMEA,SPI,TRUE
+,Porto,,"5º Andar, Edf Tranquilidade,R. D. Manuel II",Porto,,4050-344,Portugal,EMEA - Portugal,FALSE,Sitel,Call Center,EMEA,SPI,TRUE
+,Caribou,,63 Sweden St,Caribou,ME,4736,United States,North America - USA,FALSE,Sitel,Call Center,North America,Northeast,TRUE
+,Portugal - Maxhubs,,Portugal - Maxhubs,Portugal - Maxhubs,,,Portugal,EMEA - Portugal,FALSE,Sitel,MAXhubs,EMEA,SPI,TRUE
+,Portugal - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Portugal - Other Locations,,,Portugal,EMEA - Portugal,FALSE,Sitel,Other,EMEA,SPI,TRUE
+,Portugal - Virtual,,Portugal - Virtual,Portugal - Virtual,,,Portugal,EMEA - Portugal,FALSE,Sitel,Virtual,EMEA,SPI,TRUE
+,Maxim,,"Sitel, Maxim 10, Maxim Park, Parklands Avenue, ML1 4WQ",Scotland,,,Scotland,EMEA - UK,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,Scotland - Maxhubs,,Scotland - Maxhubs,Scotland - Maxhubs,,,Scotland,EMEA - UK,FALSE,Sitel,MAXhubs,EMEA,UKIN,TRUE
+,Scotland - Virtual,,Scotland - Virtual,Scotland - Virtual,,,Scotland,EMEA - UK,FALSE,Sitel,Virtual,EMEA,UKIN,TRUE
+,Dakar,,Fann Résidence Rue Léon Gontran DamaS X Alioune Diop,Dakar,,,Senegal,EMEA - Senegal,FALSE,Sitel,Call Center,EMEA,West Africa,TRUE
+,Senegal - Maxhubs,,Senegal - Maxhubs,Senegal - Maxhubs,,,Senegal,EMEA - Senegal,FALSE,Sitel,MAXhubs,EMEA,West Africa,TRUE
+,Senegal - Virtual,,Senegal - Virtual,Senegal - Virtual,,,Senegal,EMEA - Senegal,FALSE,Sitel,Virtual,EMEA,West Africa,TRUE
+,Belgrade,,"The Blue Center, Spanskih Boraca 3",New Belgrade,,11070,Serbia,EMEA - Serbia,FALSE,Sitel,Call Center,EMEA,GEE,TRUE
+,NIS,,"Nis Satellite Office, Nikodija Stojanovica Tatka bb",NIS,,18000,Serbia,EMEA - Serbia,FALSE,Sitel,Other,EMEA,GEE,TRUE
+,Serbia - Maxhubs,,Serbia - Maxhubs,Serbia - Maxhubs,,,Serbia,EMEA - Serbia,FALSE,Sitel,MAXhubs,EMEA,GEE,TRUE
+,Serbia – Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Serbia – Other Locations,,,Serbia,EMEA - Serbia,FALSE,Sitel,Other,EMEA,GEE,TRUE
+,Serbia - Virtual,,Serbia - Virtual,Serbia - Virtual,,,Serbia,EMEA - Serbia,FALSE,Sitel,Virtual,EMEA,GEE,TRUE
+,Barcelona - Parc 22,,"Complejo Empresarial, Parc 22@ Edificio B, C/Fluvia 65, Bajo",Barcelona,,,Spain,EMEA - Spain,FALSE,Sitel,Call Center,EMEA,SPI,TRUE
+,Madrid Retama,,"C/ de la Retama 7, Edificio Indocentro, Planta 11",Madrid,,,Spain,EMEA - Spain,FALSE,Sitel,Call Center,EMEA,SPI,TRUE
+,Sevilla Rep. Argentina,,"C/  Republica Argentina 25, 6a Planta",Sevilla,,,Spain,EMEA - Spain,FALSE,Sitel,Call Center,EMEA,SPI,TRUE
+,Spain - Maxhubs,,Spain - Maxhubs,Spain - Maxhubs,,,Spain,EMEA - Spain,FALSE,Sitel,MAXhubs,EMEA,SPI,TRUE
+,Spain - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Spain - Other Locations,,,Spain,EMEA - Spain,FALSE,Sitel,Call Center,EMEA,SPI,TRUE
+,Spain - Virtual,,Spain - Virtual,Spain - Virtual,,,Spain,EMEA - Spain,FALSE,Sitel,Virtual,EMEA,GEE,TRUE
+,Coventry Earlsden Park,,"The First Floor,Earlsdon Park,53-55 Butts Road.",Coventry,,CV1 3BH,United Kingdom,EMEA - UK,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,Exeter,,"3 Manor Court, Dixs Field EX 11 Street",Exeter,,,United Kingdom,EMEA - UK,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,Kingston,,"Mitre House, Canbury Park Road Kingston upon thames, Surrey, W8 4PL",Kingston upon thames,,,United Kingdom,EMEA - UK,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,Newcastle East,,"SITEL House, Wolsey Business Park Tolpits Lane, Watford HERTS",Newcastle,,,United Kingdom,EMEA - UK,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,Plymouth,,"17 Brest Road, Derriford",Plymouth,,PL6 5AA,United Kingdom,EMEA - UK,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,Stratford,,"SITEL House, Timothy's Bridge Road Stratford upon Avon, Warwickshire, CV37 9HY",Stratford upon Avon,,,United Kingdom,EMEA - UK,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,Swansea,,"1st Floor, Cardigan House, Castle Court, Swansea Enterprise Park",Swansea,,SA7 9LZ,United Kingdom,EMEA - UK,FALSE,Sitel,Call Center,EMEA,UKIN,TRUE
+,United Kingdom - Maxhubs,,United Kingdom - Maxhubs,United Kingdom - Maxhubs,,,United Kingdom,EMEA - UK,FALSE,Sitel,MAXhubs,EMEA,UKIN,TRUE
+,United Kingdom - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",United Kingdom - Other Locations,,,United Kingdom,EMEA - UK,FALSE,Sitel,Other,EMEA,UKIN,TRUE
+,United Kingdom - Virtual,,United Kingdom - Virtual,United Kingdom - Virtual,,,United Kingdom,EMEA - UK,FALSE,Sitel,Virtual,EMEA,UKIN,TRUE
+,Augusta,,2115 Windsor Springs Road Suite #1,Augusta,GA,,United States,North America - USA,FALSE,Sitel,Call Center,North America,Southeast,TRUE
+,Caribou,,63 Sweden St,Caribou,ME,4736,United States,North America - USA,FALSE,Sitel,Call Center,North America,Northeast,TRUE
+,Corning,,101 Canada Road,Painted Post,NY,,United States,North America - USA,FALSE,Sitel,Call Center,North America,Northeast,TRUE
+,NIS,,"Nis Satellite Office, Nikodija Stojanovica Tatka bb",NIS,,18000,Serbia,EMEA - Serbia,FALSE,Sitel,Other,EMEA,GEE,TRUE
+,Fishers,,"999 E. 121st Street, Fishers, Indiana",Indiana,IN,46037,United States,North America - USA,FALSE,Sitel,Call Center,North America,Mid-West,TRUE
+,Glasgow,,101 Hilltopper Way,Glasgow,KY,,United States,North America - USA,FALSE,Sitel,Call Center,North America,Southeast,TRUE
+,Knoxville,,412 North Peters Rd,Knoxville,TN,37922,United States,North America - USA,FALSE,Sitel,Call Center,North America,Southeast,TRUE
+,Las Vegas,,420 Pilot Road,Las Vegas,NV,,United States,North America - USA,FALSE,Sitel,Call Center,North America,West,TRUE
+,Norman,,2701 Technology Place,United States,OK,,United States,North America - USA,FALSE,Sitel,Call Center,North America,Mid-West,TRUE
+,Oak Ridge,,1089 Commerce Park Drive Building 5,Oak Ridge,TN,,United States,North America - USA,FALSE,Sitel,Call Center,North America,Mid-West,TRUE
+,Omaha,,7720 Crown Point Avenue,Omaha,NE,68134,United States,North America - USA,FALSE,Sitel,Call Center,North America,West,TRUE
+,Spartanburg,,"589 Springfield Road, Spartanburg, SC 29303",Spartanburg,SC,29303,United States,North America - USA,FALSE,Sitel,Call Center,North America,USA,TRUE
+,United States - Maxhubs,,United States - Maxhubs,United States - Maxhubs,Other,,United States,North America - USA,FALSE,Sitel,MAXhubs,North America,North America,TRUE
+,United States - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",United States - Other Locations,Other,,United States,North America - USA,FALSE,Sitel,Other,North America,USA,TRUE
+,United States - Virtual,,United States - Virtual,United States - Virtual,Other,,United States,North America - USA,FALSE,Sitel,Virtual,North America,USA,TRUE
+,China - Maxhubs,,China - Maxhubs,China - Maxhubs,Other,,China,Asia Pacific - China,FALSE,Sitel,MAXhubs,Asia Pacific,China,TRUE
+,China - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",United Kingdom - Other Locations,Other,,China,Asia Pacific - China,FALSE,Sitel,Other,Asia Pacific,China,TRUE
+,China - Virtual,,China - Virtual,China - Virtual,Other,,China,Asia Pacific - China,FALSE,Sitel,Other,Asia Pacific,China,TRUE

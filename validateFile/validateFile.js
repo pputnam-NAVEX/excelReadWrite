@@ -1,38 +1,112 @@
 const ExcelJS = require('exceljs');
 const path = require("path");
 
+// note add in more frequently used alternatives
+// add in a data-type validation (e.g. text, number, etc.)
+// add in field size validation (e.g. 200 characters, 100 characters, etc.)
+// add in to string and to lowercase for easier data manipulation and comparison
+// add check for duplicate or ambiguous headers (e.g. "region" AND "region code" exist, or "Address" could be address1 or address2)
+const acceptableLDBFieldNames = ['Add/Edit/Delete', 'Name', 'Branch', 'Address 1', 'Address 2', 'City', "State", "Zip", "Country", "Tier Name", "Data Privacy", "Custom Field 1", "Custom Field 2", "Custom Field 3", "Custom Field 4"];
+
+const validateLDBFields = function(fieldName) {
+    let isFieldValue = false;
+    for (field in acceptableLDBFieldNames) {
+        if (fieldName == acceptableLDBFieldNames[field]) {
+            isFieldValue = true;
+            break
+        }
+    }
+    return isFieldValue;
+}
+
+const deleteLocations = function(worksheet) {
+    worksheet.getColumn("Add/Edit/Delete").eachCell(function(cell, rowNumber) {
+        if (cell.value == "delete") {
+            console.log("Removing row " + rowNumber);
+            worksheet.spliceRows(rowNumber, 1);
+        }
+    });
+}
+// WHY ARE ADD and EDIT missing from the csv write?!
 const getWorkbook = async function(args) {
     const workbook2 = new ExcelJS.Workbook();
     const worksheet = await workbook2.csv.readFile(args);
     // console.log(worksheet);
+    console.log(worksheet.getRow(138).values);
+    let columnsUnreal = worksheet.columnCount;
+    console.log(columnsUnreal);
 
-    let rowCount = worksheet.rowCount;
-    console.log('Row count including empty = ' + rowCount);
+    worksheet.eachRow({ includeEmpty: true } ,function(row, rowNumber) {
+        // add check if "Add/Edit/Delete" column is empty, prompt if this is an initial LDB upload or an edit, request or mention to case owner that it appears nothing is changing if it is an edit.
+        if (rowNumber == 1) {
+            row.eachCell({ includeEmpty: true }, function(cell, colNumber) {
+                // if colNumber.header == FIELD
+                if (cell.value == undefined || cell.value == '' || cell.value == null) {
+                    console.log("Column " + worksheet.getColumn(colNumber).letter + " doesn't have a field name (" + cell.address + "). Please add a valid field name or delete this column if it is unnecessary.")
+                }
+                else {
+                    let isFieldValueValid = validateLDBFields(cell.value);
+                    if (isFieldValueValid) {
+                        worksheet.getColumn(colNumber).key = cell.value;
+                        console.log(worksheet.getColumn(colNumber).key)
+                    } else {
+                        console.log('Field Value "' + cell.value + '" (' + cell.address + ') is invalid, please update.')
+                    }
+                }
 
-    let startingPoint = '';
-    let addEditDeleteLetter = '';
-
-    for (x = 1; x < rowCount; x++) {
-        let row = worksheet.getRow(x);
-        console.log(row.values);
-
-        if (row.getCell(1).value = "Add/Edit/Delete") {
-            startingPoint = row.getCell(1).address;
-            addEditDeleteLetter = row.getCell(1).address.match(/^[A-Z]*[^0-9]/g)[0];
-            x = rowCount;
+                if (worksheet.getColumn(colNumber).key == "Add/Edit/Delete") {deleteLocations(worksheet)};
+            });
         }
-    }
 
-    let addEditDeleteColumn = worksheet.getColumn(addEditDeleteLetter);
-
-    addEditDeleteColumn.eachCell(function(cell, rowNumber) {
-        if (cell.value != null || cell.value == "delete" || cell.value == "remove") {
-            worksheet.spliceRows(rowNumber, 1);
+        if (rowNumber > 1) {
+            // if rows are empty
+            // if rows are duplicates
         }
     });
+    // some encoding issues when spitting out or writing data, long hyphens are an example
+    // only on the write though, they console.log fine....(from what I've tested)
+    // workbook2.csv.writeFile("newLDBspreadsheet.csv");
 
-    rowCount = worksheet.rowCount;
-    console.log('Row count including empty = ' + rowCount);
+    // if (row.getCell(1) == 'delete') {
+    //     console.log(row.getCell(1).address);
+    // }
+
+    // for (x = 1; x < columnsUnreal; x++) {
+    //     worksheet.getColumn(x).eachCell(function(cell, rowNumber) {
+    //         if (cell.value = "Add/Edit/Delete") {
+
+    //         }
+    //     })
+    // }
+
+
+    // let rowCount = worksheet.rowCount;
+    // console.log('Row count including empty = ' + rowCount);
+
+    // let startingPoint = '';
+    // let addEditDeleteLetter = '';
+
+    // for (x = 1; x < rowCount; x++) {
+    //     let row = worksheet.getRow(x);
+    //     console.log(row.values);
+
+    //     if (row.getCell(1).value = "Add/Edit/Delete") {
+    //         startingPoint = row.getCell(1).address;
+    //         addEditDeleteLetter = row.getCell(1).address.match(/^[A-Z]*[^0-9]/g)[0];
+    //         x = rowCount;
+    //     }
+    // }
+
+    // let addEditDeleteColumn = worksheet.getColumn(addEditDeleteLetter);
+
+    // addEditDeleteColumn.eachCell(function(cell, rowNumber) {
+    //     if (cell.value != null || cell.value == "delete" || cell.value == "remove") {
+    //         worksheet.spliceRows(rowNumber, 1);
+    //     }
+    // });
+
+    // rowCount = worksheet.rowCount;
+    // console.log('Row count including empty = ' + rowCount);
 
     // let firstColumn = worksheet.getColumn("A");
 
