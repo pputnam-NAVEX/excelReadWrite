@@ -8,6 +8,8 @@ const path = require("path");
 // add check for duplicate or ambiguous headers (e.g. "region" AND "region code" exist, or "Address" could be address1 or address2)
 const acceptableLDBFieldNames = ['Add/Edit/Delete', 'Name', 'Branch', 'Address 1', 'Address 2', 'City', "State", "Zip", "Country", "Tier Name", "Data Privacy", "Custom Field 1", "Custom Field 2", "Custom Field 3", "Custom Field 4"];
 
+// need to re-think how to delete and keep track of duplicates as when a row is removed then row id numbers shift and change
+// might consider emptying out the data and doing a final loop to remove empty rows before evaluating?
 var duplicates = [];
 
 const checkIfRowIsDuplicate = function(rowNumber) {
@@ -32,6 +34,9 @@ const validateLDBFields = function(fieldName) {
     return isFieldValue;
 }
 
+// need to be careful of when something is being deleted as this re-orders rows
+// eg if you delete row 13, row 14 becomes row 13 and all other rows are shifted "down" in id#
+// therefore if you are keeping track of rows to delete, the array of id# may be inaccurate after one delete!!
 const deleteLocations = function(worksheet) {
     worksheet.getColumn("Add/Edit/Delete").eachCell(function(cell, rowNumber) {
         if (cell.value == "delete") {
@@ -48,6 +53,12 @@ const compareRows = function(row1, row2) {
             exactDuplicate = false;
         }
     })
+    if (exactDuplicate) { 
+        console.log(row2.values);
+        row2.values = ''; // this effectively removes data from the entire row! Could loop through later and remove empty rows!
+        // need to test this in a fileWrite ^
+        console.log(row2.values);
+    };
     return exactDuplicate;
 }
 
@@ -86,6 +97,7 @@ const getWorkbook = async function(args) {
         if (rowNumber > 1) {
             // if rows are empty, this may also delete ghost rows at the end of data/spreadsheet
             // CHECK IF THIS EFFECTS SOMETHING WITHIN eachRow function as we're deleting an entire row!
+            // eg if we're keeping track of duplicates to delete later... the row numbers change on delete
             // SHOULD REMOVE EMPTY ROWS AFTER or BEFORE REMOVING DUPLICATES OR POSSIBLY KEEP TRACK IN AN ARRAY
             // Could DELETE DATA WITHIN A DUPLICATE ROW THEN DELETE ALL EMPTY ROWS?
             if (row.values == '' ) {
