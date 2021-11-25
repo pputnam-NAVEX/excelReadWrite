@@ -8,6 +8,19 @@ const path = require("path");
 // add check for duplicate or ambiguous headers (e.g. "region" AND "region code" exist, or "Address" could be address1 or address2)
 const acceptableLDBFieldNames = ['Add/Edit/Delete', 'Name', 'Branch', 'Address 1', 'Address 2', 'City', "State", "Zip", "Country", "Tier Name", "Data Privacy", "Custom Field 1", "Custom Field 2", "Custom Field 3", "Custom Field 4"];
 
+var duplicates = [];
+
+const checkIfRowIsDuplicate = function(rowNumber) {
+    let isADuplicate = false;
+    for (row in duplicates) {
+        console.log("This is where this number is coming from " + duplicates[row])
+        if (rowNumber == duplicates[row]) {
+            isADuplicate = true;
+        }
+    }
+    return isADuplicate;
+}
+
 const validateLDBFields = function(fieldName) {
     let isFieldValue = false;
     for (field in acceptableLDBFieldNames) {
@@ -20,25 +33,33 @@ const validateLDBFields = function(fieldName) {
 }
 
 const deleteLocations = function(worksheet) {
-    console.log(worksheet.getColumn("Add/Edit/Delete").values);
     worksheet.getColumn("Add/Edit/Delete").eachCell(function(cell, rowNumber) {
-        
         if (cell.value == "delete") {
             console.log("Removing row " + rowNumber);
             worksheet.spliceRows(rowNumber, 1);
         }
     });
-    console.log(worksheet.getColumn("Add/Edit/Delete").values);
+}
+
+const compareRows = function(row1, row2) {
+    let exactDuplicate = true;
+    row1.eachCell(function(cell, colNumber) {
+        if (cell.value != row2.getCell(colNumber).value) {
+            exactDuplicate = false;
+        }
+    })
+    return exactDuplicate;
 }
 
 const getWorkbook = async function(args) {
+    duplicates = []; // reset this if a spreadsheet has already been run;
     const workbook2 = new ExcelJS.Workbook();
     const options = { encoding: 'UTF-8' };
     const worksheet = await workbook2.csv.readFile(args, options);
-    console.log(worksheet);
-    console.log(worksheet.getCell('A1').value);
     let columnsUnreal = worksheet.columnCount;
-    console.log(columnsUnreal);
+
+    // console.log("Outcome of compareRows 83 & 84 = " + compareRows(worksheet.getRow(83), worksheet.getRow(84)));
+    // console.log("Outcome of compareRows 75 & 76 = " + compareRows(worksheet.getRow(75), worksheet.getRow(76)));
 
     worksheet.eachRow({ includeEmpty: true } ,function(row, rowNumber) {
         // add check if "Add/Edit/Delete" column is empty, prompt if this is an initial LDB upload or an edit, request or mention to case owner that it appears nothing is changing if it is an edit.
@@ -52,7 +73,7 @@ const getWorkbook = async function(args) {
                     let isFieldValueValid = validateLDBFields(cell.value);
                     if (isFieldValueValid) {
                         worksheet.getColumn(colNumber).key = cell.value;
-                        console.log(worksheet.getColumn(colNumber).key)
+                        // console.log(worksheet.getColumn(colNumber).key)
                     } else {
                         console.log('Field Value "' + cell.value + '" (' + cell.address + ') is invalid, please update.')
                     }
@@ -61,10 +82,37 @@ const getWorkbook = async function(args) {
                 if (worksheet.getColumn(colNumber).key == "Add/Edit/Delete") {deleteLocations(worksheet)};
             });
         }
-
+        
         if (rowNumber > 1) {
-            // if rows are empty
+            // if rows are empty, this may also delete ghost rows at the end of data/spreadsheet
+            // CHECK IF THIS EFFECTS SOMETHING WITHIN eachRow function as we're deleting an entire row!
+            // SHOULD REMOVE EMPTY ROWS AFTER or BEFORE REMOVING DUPLICATES OR POSSIBLY KEEP TRACK IN AN ARRAY
+            // Could DELETE DATA WITHIN A DUPLICATE ROW THEN DELETE ALL EMPTY ROWS?
+            if (row.values == '' ) {
+                console.log("Row " + rowNumber + " is empty. Deleting row");
+                worksheet.spliceRows(rowNumber, 1);
+            }
             // if rows are duplicates
+            let isADuplicateRow = checkIfRowIsDuplicate(rowNumber);
+            if (isADuplicateRow == false) {
+                worksheet.eachRow(function(rowCompare, rowNumberCompare) { // only checks non-empty rows
+                    // Since we're starting with row #2, the first skips previous rows up to the next row
+                    // IF we're not comparing the row against itself, just in case
+                    // AND if the row we're comparing against hasn't already been found to be a duplicate
+                    if (rowNumber < rowNumberCompare && rowNumber != rowNumberCompare && checkIfRowIsDuplicate(rowNumberCompare) == false) {
+                        console.log("rowNumber = " + rowNumber);
+                        console.log("rowNumberCompare = " + rowNumberCompare);
+                        console.log("check if dupe func result = " + checkIfRowIsDuplicate(rowNumberCompare));
+                        if (compareRows(row, rowCompare)) {
+                            duplicates.push(rowNumberCompare);
+                            console.log("Row " + rowNumberCompare + " is a duplicate of rowNumber " + rowNumber);
+                            isADuplicateRow = true;
+                        }
+                    }
+                });
+            } else {
+                console.log("Row " + rowNumber + " already deemed a duplicate, skipping.")
+            }
         }
     });
     // some encoding issues when spitting out or writing data, long hyphens are an example
@@ -72,8 +120,8 @@ const getWorkbook = async function(args) {
     // console.log(worksheet.getColumn("Add/Edit/Delete").values);
     // ENCODE errors only seem to happen opening with Excel?!?! Notepad++ does just fine UTF-8!
     // When looking at Notepad++, difference seems to be UTF-8-BOM (Byte order mark) vs UTF-8 and perhaps Windows (CR LF) vs Unix LF. Using Notepad++ to change encoding to UTF-8-BOM makes the spreadsheet encode correctly.
-    worksheet.getCell('A1').value = "\ufeff" + worksheet.getCell('A1').value; // !!! THIS IS FOR UTF-8-BOM!!!
-    workbook2.csv.writeFile("newLDBspreadsheet.csv", options);
+    // worksheet.getCell('A1').value = "\ufeff" + worksheet.getCell('A1').value; // !!! THIS IS FOR UTF-8-BOM!!!
+    // workbook2.csv.writeFile("newLDBspreadsheet.csv", options);
 
     // if (row.getCell(1) == 'delete') {
     //     console.log(row.getCell(1).address);
