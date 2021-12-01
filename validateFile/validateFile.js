@@ -46,6 +46,7 @@ const deleteLocations = function(worksheet) {
     });
 }
 
+// should likely not use NPM package eachCell as we want to break the loop immediately if a cell doesn't match exactly for efficiency, maybe a WHILE LOOP?
 const compareRows = function(row1, row2) {
     let exactDuplicate = true;
     row1.eachCell(function(cell, colNumber) {

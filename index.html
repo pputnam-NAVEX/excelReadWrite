@@ -7,6 +7,22 @@
 
     <form action="">
         <div>
+            <label for="locationDropdownField">Choose WIS location drop downs:</label>
+            <br/>
+            <select name="locationDropdownField" id="field1" class='locationField'>
+                <option value="country">Country</option>
+                <option value="state">State</option>
+                <option value="city">City</option>
+                <option value="name">Name</option>
+                <option value="branch">Branch or Branch Number</option>
+                <option value="address1">Address1 (primary)</option>
+                <option value="address2">Address2 (alternate)</option>
+                <option value="custom field 1">Custom Field 1</option>
+                <option value="custom field 2">Custom Field 2</option>
+                <option value="custom field 3">Custom Field 3</option>
+                <option value="custom field 4">Custom Field 4</option>
+            </select>
+            <br/>
             <label for="">Select a spreadsheet</label>
             <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
         </div>
@@ -16,4 +32,5 @@
     </form>
 
     <script src="dataRouting.js" type='text/javascript'></script>
+    <script src="frontend/locationGUI.js" type='text/javascript'></script>
 </body>
