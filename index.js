@@ -14,13 +14,12 @@ async function createWindow() {
 
   // Create the browser window.
   win = new BrowserWindow({
-    width: 1000,
+    width: 2000,
     height: 1000,
     webPreferences: {
       contextIsolation: true, // protect against prototype pollution
       enableRemoteModule: false, // turn off remote
       preload: path.join(__dirname, "preload.js"), // use a preload script
-      devTools: true,
     }
   });
 
@@ -28,6 +27,7 @@ async function createWindow() {
   win.loadFile(path.join(__dirname, "index.html"));
 
   // rest of code..
+  win.webContents.openDevTools()
 }
 
 app.on("ready", createWindow);

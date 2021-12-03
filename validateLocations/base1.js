@@ -55,9 +55,11 @@ const reviewLocationSpreadsheet = async function(args) {
             results.push(emptyRow);
             console.log(emptyRow);
         } else {
-            
+
         }
     });
+
+    return results;
 };
 
-exports.reviewLocations = reviewLocationSpreadsheet;
+exports.reviewLocationSpreadsheet = reviewLocationSpreadsheet;
