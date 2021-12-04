@@ -16,7 +16,7 @@ delete,Bulgaria - Maxhubs,,Bulgaria - Maxhubs,Bulgaria - Maxhubs,,,Bulgaria,EMEA
 ,Canada - Virtual,,Canada - Virtual,Canada - Virtual,,,Canada,North America - Canada,FALSE,Sitel,Virtual,North America,Northeast,TRUE,,,
 ,St Catharines,,333 Ontario St,St Catharines,ON,,Canada,North America - Canada,FALSE,Sitel,Call Center,North America,Northeast,TRUE,,,
 ,St. John,,"120 McDonald St, Saint John",Saint John,NB,,Canada,North America - Canada,FALSE,Sitel,Call Center,North America,Northeast,TRUE,,,
-delete,Baranquilla,,"Carrera 53 No. 106-280 Torre B , piso 14- Oficinas 14ª- 14, Centro Empresarial Buena Vista, Barranquilla",Atlántico,,,Colombia,LATAM - Colombia,FALSE,Sitel,MAXhubs,LATAM,South America,TRUE,,,
+delete,Baranquilla,,"Carrera 53 No. 106-280 Torre B , piso 14- Oficinas 14ª- 14, Centro Empresarial Buena Vista, Barranquilla",Atlántico,,,Colombia,LATAM - Colombia,,Sitel,MAXhubs,LATAM,South America,TRUE,,,
 ,Cali Colombia,,CALLE 22 N # 2N 60 Barrio PILOTO,Cali,,,Colombia,LATAM - Colombia,FALSE,Sitel,Call Center,LATAM,South America,TRUE,,,
 ,Calle 143,,Calle 143 No 45 50 Bogota colombia,Bogota,,,Colombia,LATAM - Colombia,FALSE,Sitel,Call Center,LATAM,South America,TRUE,,,
 ,Calle 165,,Calle 165 No 45-46 Piso 4,Bogota,,,Colombia,LATAM - Colombia,FALSE,Sitel,Call Center,LATAM,South America,TRUE,,,

@@ -33,13 +33,74 @@ const removeEmptyColumns = function(worksheet) {
         }
     })
 }
+// this again needs to be called before removing any rows/columns to keep cell addresses (row numbers and column letters) the same of the original file for the IM/case owner to reference.
+// this also means checking the "Add/Edit/Delete" column of that row to see if it is going to be scheduled for delete and then if so ignore the data in this cell/row.
+const DPData = ["TRUE","FALSE","true","false","yes","no","y","n",true,false];
+const validateDataPrivacy = function(worksheet, results) {
+    // likely make "dataPrivacyModule" checking for DP/country/country consistency/etc.
+    let headerRow = worksheet.getRow(1);
+    let headers = []; // this should likely be kept somewhere globally if helpful in other areas, maybe collect more info too like column letter/number/etc. This likely be set when they are created!
+    headerRow.eachCell(function(cell, colNumber) {
+        headers.push(worksheet.getColumn(colNumber).key);
+    })
+    let DP = false;
+    let country = false;
+    // this should all be handled when setting keys unless the column is empty
+    for (header in headers) {
+        if (headers[header] == "Data Privacy") {
+            console.log("Data Privacy exists and has data");
+            DP = true;
+        }
+        if (headers[header] == "Country") {
+            country = true
+        }
+        if (DP == true && country == true) { break }
+    }
 
-const validateDataPrivacy = function(worksheet) {
-    worksheet.getColumn("Data Privacy")
+    if (DP && !country) {
+        // going to need to pass in result or return something for this to display on frontend
+        let noCountryColumn = "Data Privacy column exists and has data, but there is no Country column. The Data Privacy module must utilize Country data as a field.";
+        results.push(noCountryColumn);
+        console.log(noCountryColumn);
+    } else if (DP && country) {
+        let dpColumn = worksheet.getColumn("Data Privacy");
+        let countryColumn = worksheet.getColumn("Country");
+        dpColumn.eachCell({ includeEmpty: true}, function(cell, rowNumber) {
+            let isValid = true;
+            let emptyOrInvalidData = '';
+            if (rowNumber > 1 && worksheet.getCell("A" + rowNumber) != 'delete') { // skip header row & location scheduled to be deleted
+                for (dpType in DPData) {
+                    if (cell.value == undefined || cell.value == null || cell.value == '') {
+                        console.log(cell.value)
+                        emptyOrInvalidData = `Cell ${cell.address} in Data Privacy column is empty or invalid please update`;
+                        results.push(emptyOrInvalidData);
+                        break
+                    } else if (cell.value == DPData[dpType]) {
+                        isValid = true;
+                        break
+                    } else {
+                        isValid = false;
+                    }
+                }
+                if (!isValid) {
+                    emptyOrInvalidData = `Cell ${cell.address} in Data Privacy column is empty or invalid please update`;
+                    results.push(emptyOrInvalidData);
+                }
+            }
+        });
+        countryColumn.eachCell({ includeEmpty: true}, function(cell, rowNumber) {
+            if (cell.value == undefined || cell.value == null || cell.value == '') {
+                emptyOrInvalidData = `Cell ${cell.address} in Country column is empty or invalid, with a Data Privacy module, all locations must have Country data. Please update or review.`;
+                results.push(emptyOrInvalidData);
+            }
+        })
+    }
 }
 
 const reviewLocationSpreadsheet = async function(args) {
     const workbook = new ExcelJS.Workbook();
+    // do we fork files here, one for CI one for IM? Two files, somehow keep workload down
+    // keep global "working copy" of review results ready for edit in index.js or something similar (e.g. don't just send it to the front end and remove from memory.)
     const worksheet = await workbook.csv.readFile(args.path);
     let results = [];
 
@@ -63,13 +124,17 @@ const reviewLocationSpreadsheet = async function(args) {
                             console.log(invalidHeader);
                         }
                     }
-                    // if (worksheet.getColumn(colNumber).key == "Data Privacy") {validateDataPrivacy(worksheet)};
                 } else {
                     let emptyColumn = 'Column ' + worksheet.getColumn(colNumber).letter + " " + cell.value + " is empty and can be removed/deleted."
                     results.push(emptyColumn);
                     console.log(emptyColumn);
                 }
             });
+            validateDataPrivacy(worksheet, results);
+            // For now - anything below this comment section will not be accurately reported on frontend as the worksheet object is edited.
+            // 
+            // 
+            // for accurate cell addresses for case owner/IM review before removing anything
             // call after for accurate report column letter report on frontend in unedited original spreadsheet.
             removeEmptyColumns(worksheet);
         } else if (row.values == '' ) {
@@ -81,7 +146,9 @@ const reviewLocationSpreadsheet = async function(args) {
         }
     });
     // call this after eachRow because if empty rows are deleted this will change the row number that is reported to user/case owner/IM when they are shifted up.
+    // this will throw error if it doesn't exist, need to validate
     if (worksheet.getColumn("Add/Edit/Delete")) {deleteLocations(worksheet)};
+    
 
     return results;
 };
