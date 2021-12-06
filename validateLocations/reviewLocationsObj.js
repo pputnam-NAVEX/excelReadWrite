@@ -33,6 +33,32 @@ const removeEmptyColumns = function(worksheet) {
         }
     })
 }
+
+const consistentCountryDPConfig = function(worksheet, results) {
+    // define location object with "country/DP status/count"
+    let countries = [];
+    let countryColumn = worksheet.getColumn("Country");
+    let DPColumn = worksheet.getColumn("Data Privacy");
+    console.log("Data Privacy column letter is " + DPColumn.letter);
+
+    countryColumn.eachCell(function(cell, rowNumber) {
+        if (worksheet.getCell("A" + rowNumber) != "delete" && rowNumber != "1") {
+            let notUniqueCountry = true;
+            for (country in countries) {
+                if (cell.value == countries[country]) {
+                    notUniqueCountry = false;
+                    break;
+                }
+            }
+
+            if (notUniqueCountry) {
+                countries.push(cell.value);
+                console.log(cell.value);
+            }
+        }
+    })
+}
+
 // this again needs to be called before removing any rows/columns to keep cell addresses (row numbers and column letters) the same of the original file for the IM/case owner to reference.
 // this also means checking the "Add/Edit/Delete" column of that row to see if it is going to be scheduled for delete and then if so ignore the data in this cell/row.
 const DPData = ["TRUE","FALSE","true","false","yes","no","y","n",true,false];
@@ -58,13 +84,14 @@ const validateDataPrivacy = function(worksheet, results) {
     }
 
     if (DP && !country) {
-        // going to need to pass in result or return something for this to display on frontend
         let noCountryColumn = "Data Privacy column exists and has data, but there is no Country column. The Data Privacy module must utilize Country data as a field.";
         results.push(noCountryColumn);
         console.log(noCountryColumn);
     } else if (DP && country) {
+        consistentCountryDPConfig(worksheet, results);
         let dpColumn = worksheet.getColumn("Data Privacy");
         let countryColumn = worksheet.getColumn("Country");
+        // likely consolidate these two eachCell for DP & Country just use different validations
         dpColumn.eachCell({ includeEmpty: true}, function(cell, rowNumber) {
             let isValid = true;
             let emptyOrInvalidData = '';
@@ -88,10 +115,12 @@ const validateDataPrivacy = function(worksheet, results) {
                 }
             }
         });
-        countryColumn.eachCell({ includeEmpty: true}, function(cell, rowNumber) {
-            if (cell.value == undefined || cell.value == null || cell.value == '') {
-                emptyOrInvalidData = `Cell ${cell.address} in Country column is empty or invalid, with a Data Privacy module, all locations must have Country data. Please update or review.`;
-                results.push(emptyOrInvalidData);
+        countryColumn.eachCell({ includeEmpty: true}, function(cell, rowNumber) { // skip header row & location scheduled to be deleted
+            if (rowNumber > 1 && worksheet.getCell("A" + rowNumber) != 'delete') {
+                if (cell.value == undefined || cell.value == null || cell.value == '') {
+                    emptyOrInvalidData = `Cell ${cell.address} in Country column is empty or invalid, with a Data Privacy module, all locations must have Country data. Please update or review.`;
+                    results.push(emptyOrInvalidData);
+                }
             }
         })
     }
@@ -132,10 +161,10 @@ const reviewLocationSpreadsheet = async function(args) {
             });
             validateDataPrivacy(worksheet, results);
             // For now - anything below this comment section will not be accurately reported on frontend as the worksheet object is edited.
-            // 
+            // If we haven't forked into two different files we could do so now
             // 
             // for accurate cell addresses for case owner/IM review before removing anything
-            // call after for accurate report column letter report on frontend in unedited original spreadsheet.
+            // call after for accurate report column letter on frontend in unedited original spreadsheet.
             removeEmptyColumns(worksheet);
         } else if (row.values == '' ) {
             let emptyRow = "Row " + rowNumber + " is empty. Please delete empty rows or fix if unintended";

@@ -6,7 +6,7 @@
 ,Brazil - Maxhubs,,Brazil - Maxhubs,Brazil - Maxhubs,,,Brazil,LATAM - Brazil,TRUE,Sitel,MAXhubs,LATAM,South America,TRUE,,,
 ,Brazil - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Brazil - Other Locations,,,Brazil,LATAM - Brazil,FALSE,Sitel,Other,LATAM,South America,TRUE,,,
 ,Brazil - Virtual,,Brazil - Virtual,Brazil - Virtual,,,Brazil,LATAM - Brazil,FALSE,Sitel,Virtual,LATAM,South America,TRUE,,,
-delete,Bulgaria - Maxhubs,,Bulgaria - Maxhubs,Bulgaria - Maxhubs,,,Bulgaria,EMEA - Bulgaria,FALSE,Sitel,MAXhubs,EMEA,GEE,TRUE,,,
+delete,Bulgaria - Maxhubs,,Bulgaria - Maxhubs,Bulgaria - Maxhubs,,,,EMEA - Bulgaria,FALSE,Sitel,MAXhubs,EMEA,GEE,TRUE,,,
 ,Bulgaria - Other Locations,,"Other Locations includes: Corporate office, Client Sites, Data Centers or any New Sites",Bulgaria - Other Locations,,,Bulgaria,EMEA - Bulgaria,FALSE,Sitel,Other,EMEA,GEE,TRUE,,,
 ,Bulgaria - Virtual,,Bulgaria - Virtual,Bulgaria - Virtual,,,Bulgaria,EMEA - Bulgaria,FALSE,Sitel,Virtual,EMEA,GEE,TRUE,,,
 ,Sofia,,"55 Nikola Vapzarov blvd. Expo 2000, reception 3",Sofia,,,Bulgaria,EMEA - Bulgaria,FALSE,Sitel,Call Center,EMEA,GEE,TRUE,,,
