@@ -126,7 +126,26 @@ const validateDataPrivacy = function(worksheet, results) {
     }
 }
 
+// const validateSpecificity = function(worksheet, results, requestedFields, headers) {
+//     let fields = ["Country"];
+//     let headers = ["Add/Edit/Delete", "Country", "Data Privacy", "Custom Field 1", "City", "State"];
+//     let validFields = [];
+
+//     for (field in fields) {
+//         let validField = false;
+//         for (header in headers) {
+//             if (fields[field] == headers[header]) {
+//                 validField = true;
+//                 validFields.push(fields[field]);
+//                 break;
+//             }
+//         }
+//     }
+// }
+
 const reviewLocationSpreadsheet = async function(args) {
+    let argsObject = args;
+    console.log(argsObject);
     const workbook = new ExcelJS.Workbook();
     // do we fork files here, one for CI one for IM? Two files, somehow keep workload down
     // keep global "working copy" of review results ready for edit in index.js or something similar (e.g. don't just send it to the front end and remove from memory.)
