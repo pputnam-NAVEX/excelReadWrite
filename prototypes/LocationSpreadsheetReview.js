@@ -1,40 +1,47 @@
 const path = require("path");
 const locationData = require('../dataValidation/locations.js');
 
+setHeaderFields = (worksheet) => {
+    let headers = [];
+    let headerRow = worksheet.getRow(1);
+
+    headerRow.eachCell( {includeEmpty: true}, function(cell, colNumber) {
+        let cellValueLowerCase =  cell.value ? cell.value.toLowerCase() : '';
+        let field = {
+            address: cell.address,
+            columnKey: cellValueLowerCase,
+            fieldName: cell.value,
+            columnNumber: colNumber,
+            columnLetter: worksheet.getColumn(colNumber).letter,
+            columnCount: worksheet.getColumn(colNumber).values.length,
+            isValidField: locationData.CI_locations.checkValidityOfData("validLocationFields", cellValueLowerCase)
+        }
+        headers.push(field);
+
+        if (field.isValidField) {
+            worksheet.getColumn(colNumber).key = field.columnKey;
+        }
+    });
+
+    return headers;
+}
 
 class LocationSpreadsheetReview {
-    constructor(fileFullPath, requestedFields, worksheet) {
-        this.fileFullPath = fileFullPath;
-        this.fileName = path.basename(fileFullPath);
-        this.fileType = path.extname(fileFullPath);
+    constructor(fullFilePath, requestedFields, worksheet) {
+        this.fullFilePath = fullFilePath;
+        this.fileName = path.basename(fullFilePath);
+        this.fileType = path.extname(fullFilePath);
         this.requestedFields = requestedFields;
         this.worksheet = worksheet;
-        this.headerFields = (worksheet) => {
-            let headers = [];
-            let headerRow = worksheet.getRow(1);
-
-            headerRow.eachCell( {includeEmpty: true}, function(cell, colNumber) {
-                let field = {
-                    columnKey: cell.value.toLowerCase(),
-                    fieldName: cell.value,
-                    columnNumber: colNumber,
-                    columnCount: worksheet.getColumn(colNumber).values.length,
-                    isValidField: locationData.CI_locations.checkValidityOfData(validLocationFields, cell.value.toLowerCase())
-                }
-                headers.push(field);
-
-                if (field.isValidField) {
-                    this.worksheet.getColumn(colNumber).key = field.columnKey;
-                }
-            });
-
-            return headers;
-
-        }
+        this.headerFields = setHeaderFields(worksheet);
     }
 
-    get fullPathToFile() {
-        return this.fileFullPath;
+    get fileDirectory() {
+        return this.fullFilePath;
+    }
+
+    get allHeaders() {
+        return this.headerFields;
     }
 }
 

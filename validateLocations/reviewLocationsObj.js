@@ -154,7 +154,7 @@ const reviewLocationSpreadsheet = async function(args) {
     const worksheet = await workbook.csv.readFile(args.path);
     let results = [];
     let evaluateLocations = new LocationSpreadsheetReview.LocationSpreadsheetReview(args.path, args.fields, worksheet);
-    console.log(evaluateLocations.fileDirectory);
+    console.log(evaluateLocations.headerFields);
 
     worksheet.eachRow({ includeEmpty: true } ,function(row, rowNumber) {
         if (rowNumber == 1) {
