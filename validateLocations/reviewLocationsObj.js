@@ -1,4 +1,6 @@
+const { Debugger } = require('electron');
 const ExcelJS = require('exceljs');
+const LocationSpreadsheetReview = require('../prototypes/LocationSpreadsheetReview')
 
 const acceptableLDBFieldNames = ['Add/Edit/Delete', 'Name', 'Branch', 'Address 1', 'Address 2', 'City', "State", "Zip", "Country", "Tier Name", "Data Privacy", "Custom Field 1", "Custom Field 2", "Custom Field 3", "Custom Field 4"];
 
@@ -151,6 +153,8 @@ const reviewLocationSpreadsheet = async function(args) {
     // keep global "working copy" of review results ready for edit in index.js or something similar (e.g. don't just send it to the front end and remove from memory.)
     const worksheet = await workbook.csv.readFile(args.path);
     let results = [];
+    let evaluateLocations = new LocationSpreadsheetReview.LocationSpreadsheetReview(args.path, args.fields, worksheet);
+    console.log(evaluateLocations.fileDirectory);
 
     worksheet.eachRow({ includeEmpty: true } ,function(row, rowNumber) {
         if (rowNumber == 1) {
