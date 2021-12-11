@@ -1,12 +1,14 @@
 const path = require("path");
 const locationData = require('../dataValidation/locations.js');
+const tests = require('./helperTestFunctions/locationsTests.js');
 
-setHeaderFields = (worksheet) => {
-    let headers = [];
+setHeaderFields = (worksheet, thisWorksheet) => {
+    let headers = {};
     let headerRow = worksheet.getRow(1);
 
     headerRow.eachCell( {includeEmpty: true}, function(cell, colNumber) {
         let cellValueLowerCase =  cell.value ? cell.value.toLowerCase() : '';
+        (cellValueLowerCase != '') ? headers[cellValueLowerCase] = {} : headers[cell.address] = {}
         let field = {
             address: cell.address,
             columnKey: cellValueLowerCase,
@@ -16,13 +18,12 @@ setHeaderFields = (worksheet) => {
             columnCount: worksheet.getColumn(colNumber).values.length,
             isValidField: locationData.CI_locations.checkValidityOfData("validLocationFields", cellValueLowerCase)
         }
-        headers.push(field);
+        headers[cellValueLowerCase] = field;
 
         if (field.isValidField) {
-            worksheet.getColumn(colNumber).key = field.columnKey;
+            thisWorksheet.getColumn(colNumber).key = field.columnKey;
         }
     });
-
     return headers;
 }
 
@@ -33,7 +34,8 @@ class LocationSpreadsheetReview {
         this.fileType = path.extname(fullFilePath);
         this.requestedFields = requestedFields;
         this.worksheet = worksheet;
-        this.headerFields = setHeaderFields(worksheet);
+        this.headerFields = setHeaderFields(worksheet, this.worksheet);
+        this.fieldSpecificity = tests.tests.locationSpecificity(requestedFields, this.headerFields, worksheet);
     }
 
     get fileDirectory() {
@@ -42,6 +44,10 @@ class LocationSpreadsheetReview {
 
     get allHeaders() {
         return this.headerFields;
+    }
+
+    get theEntireWorksheet() {
+        return this.worksheet;
     }
 }
 

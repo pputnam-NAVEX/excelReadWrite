@@ -1,9 +1,11 @@
 const CI_locations = {
+    // Add to either of these arrays just once, the full list is concatenated in an array after object instantiation at bottom of file.
     // strictly used by CI to upload locations
     uploadValidFields:["counter","name","location","branch","address1","address2","city","state","zip","postal code","country","region","region code","country code","custom field 1","custom field 2","custom field 3","custom field 4","custom field 5","custom field 6","starwoodid","redirectclientid", "violationpackageid","dataprivacy","client identifier"],
     // acceptable determinable fields that can be later changed into valid strict fields used by CI
     caseOwnerValidFieldsDiff:["add/edit/delete","address 1","address 2","branch #","branch number","cf1","cf2","cf3","cf4","cf5","cf6","client id","data privacy","dp","location name","starwood id","state/province","tier name","tier"],
     dataPrivacy:["true","false","yes","no","y","n"],
+    delete:['del, delete, remove'],
     invalidCharacters:[";",'"'],
     sanctionedCountries:["Cuba","Syria","Iran"], // check these
     // arrayToCompare should be an object key in CI_locations
