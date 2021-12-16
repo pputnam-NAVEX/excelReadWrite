@@ -1,6 +1,6 @@
 ﻿Add/Edit/Delete,Name,Branch,Address 1,City,State,Zip,Country,Tier Name,Data Privacy,Custom Field 1,Custom Field 2,Custom Field 3,Custom Field 4
 ,Corporate,,,Portland,OR,,USA,,,,,,
-,,,,Eugene,OR,,USA,,,,,,
+,Violet,,,Eugene,OR,,USA,,,,,,
 ,,,,,OR,,USA,,,,,,
 ,,,,,,,USA,,,,,,
 ,,,,,,,USA,,,,,,
@@ -24,3 +24,5 @@
 ,,,,Puerto,NA,,Mexico,,,,,,
 ,,,,Puerto,NA,,Mexico,,,,,,
 ,,,,Puerto,NA,,Mexico,,,,,,
+,Yellow,,,,CA,,USA,,,,,,
+,,,,Eugene,OR,,USA,,,,,,

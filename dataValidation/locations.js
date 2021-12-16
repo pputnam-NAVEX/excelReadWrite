@@ -6,6 +6,8 @@ const CI_locations = {
     caseOwnerValidFieldsDiff:["add/edit/delete","address 1","address 2","branch #","branch number","cf1","cf2","cf3","cf4","cf5","cf6","client id","data privacy","dp","location name","starwood id","state/province","tier name","tier"],
     dataPrivacy:["true","false","yes","no","y","n"],
     delete:['del, delete, remove'],
+    add:['add, ad, new, additional'],
+    edit:["edit, ed, change, update"],
     invalidCharacters:[";",'"'],
     sanctionedCountries:["Cuba","Syria","Iran"], // check these
     // arrayToCompare should be an object key in CI_locations
