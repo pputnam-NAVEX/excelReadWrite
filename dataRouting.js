@@ -5,7 +5,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     const locationFields = document.getElementsByClassName('locationField');
 
     let fields = [];
-    for (field in locationFields) {
+    for (field = 0; field < locationFields.length; field++) {
         fields.push(locationFields[field].value)
     };
 

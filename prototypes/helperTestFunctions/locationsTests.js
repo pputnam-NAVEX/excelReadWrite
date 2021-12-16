@@ -16,11 +16,9 @@ const tests = {
     locationSpecificity: function(requestedFields, worksheetHeaderFields, worksheet) {
         let fieldsWithData = [];
         for (field in requestedFields) {
-            if (requestedFields[field] != undefined) {
-                for (actualField in worksheetHeaderFields) {
-                    if (requestedFields[field] == worksheetHeaderFields[actualField].columnKey) {
-                        fieldsWithData.push(worksheetHeaderFields[actualField]);
-                    }
+            for (actualField in worksheetHeaderFields) {
+                if (requestedFields[field] == worksheetHeaderFields[actualField].columnKey) {
+                    fieldsWithData.push(worksheetHeaderFields[actualField]);
                 }
             }
         }
