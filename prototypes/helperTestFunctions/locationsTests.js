@@ -95,17 +95,15 @@ const tests = {
                 }
             }
         }
-        for (dup in results.duplicateLocationsByField) { 
+        for (dup in results.duplicateLocationsByField) {
             for (item in results.duplicateLocationsByField[dup]) {
                 console.log(`${results.duplicateLocationsByField[dup][item].row}`)
             }
-            }
+        }
         console.log(`Locs with empty cells = ${results.locationsWithDataAndEmptyCells}`)
         console.log(`Specific cells = ${results.specificCellsWithMissingData}`)
-        
+
         return results;
-        
-        
     }
 }
 

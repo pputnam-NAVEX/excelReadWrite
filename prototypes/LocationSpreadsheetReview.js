@@ -46,6 +46,10 @@ class LocationSpreadsheetReview {
         return this.headerFields;
     }
 
+    get userRequestedFields() {
+        return this.requestedFields;
+    }
+
     get theEntireWorksheet() {
         return this.worksheet;
     }

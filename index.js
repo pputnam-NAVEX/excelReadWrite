@@ -5,6 +5,7 @@ const path = require("path");
 const validateLocationSpreadsheet = require('./validateLocationSpreadsheet');
 const getWorkbook = require('./validateFile/validateFile')
 const reviewLocations = require('./validateLocations/reviewLocationsObj.js')
+const parseLocExcelResults = require('./frontend/parseLocSpreadsheetResults.js')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -34,16 +35,13 @@ app.on("ready", createWindow);
 
 // receiving from and sending to index.html video file path variable
 ipcMain.on("toMain", (event, args) => {
-    // for (key in args) {
-    //     console.log(`${key}: ${args[key]}`);
-    // }
     if (path.extname(args.path) == ".csv") {
         const results = new Promise((resolve, reject) => {
             resolve(reviewLocations.reviewLocationSpreadsheet(args));
         });
         results.then((results) => {
-            // console.log("results = " + results);
-            win.webContents.send("fromMain", results)
+            let analysis = parseLocExcelResults.parseLocObjResult(results);
+            win.webContents.send("fromMain", analysis)
         });
     } else {
         let results = ["Please utilize a .csv formatted spreadsheet only"]

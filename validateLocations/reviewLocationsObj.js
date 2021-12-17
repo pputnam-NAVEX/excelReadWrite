@@ -154,6 +154,7 @@ const reviewLocationSpreadsheet = async function(args) {
     const worksheet = await workbook.csv.readFile(args.path);
     let results = [];
     let evaluateLocations = new LocationSpreadsheetReview.LocationSpreadsheetReview(args.path, args.fields, worksheet);
+    console.log(evaluateLocations.userRequestedFields);
 
     worksheet.eachRow({ includeEmpty: true } ,function(row, rowNumber) {
         if (rowNumber == 1) {
@@ -201,7 +202,7 @@ const reviewLocationSpreadsheet = async function(args) {
     if (worksheet.getColumn("Add/Edit/Delete")) {deleteLocations(worksheet)};
     
 
-    return results;
+    return evaluateLocations;
 };
 
 exports.reviewLocationSpreadsheet = reviewLocationSpreadsheet;
