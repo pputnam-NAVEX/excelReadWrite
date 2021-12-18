@@ -3,14 +3,17 @@
 </head>
 
 <body>
-    <h1>Excel Read/Write</h1>
+    <h1>Location Spreadsheet Review</h1>
 
     <form action="">
         <div>
-            <label for="locationDropdownField">Choose WIS location drop downs:</label>
+            <label for="locationDropdownField">
+                Choose WIS location drop downs in order of preference:<br/>
+                (this is important for various reasons)
+            </label>
             <br/>
             <div id="locationFieldDropdownContainer">
-                <select name="locationDropdownField" id="field1" class='locationField'>
+                <select name="locationDropdownField" id="field1" class='locationField' onchange='updateDropdownValues(event)'>
                     <option value="country">Country</option>
                     <option value="state">State</option>
                     <option value="city">City</option>

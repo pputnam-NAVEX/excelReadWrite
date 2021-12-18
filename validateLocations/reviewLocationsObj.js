@@ -199,7 +199,7 @@ const reviewLocationSpreadsheet = async function(args) {
     });
     // call this after eachRow because if empty rows are deleted this will change the row number that is reported to user/case owner/IM when they are shifted up.
     // this will throw error if it doesn't exist, need to validate
-    if (worksheet.getColumn("Add/Edit/Delete")) {deleteLocations(worksheet)};
+    // if (worksheet.getColumn("Add/Edit/Delete")) {deleteLocations(worksheet)};
     
 
     return evaluateLocations;
