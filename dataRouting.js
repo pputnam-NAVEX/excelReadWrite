@@ -16,7 +16,6 @@ document.querySelector('form').addEventListener('submit', (event) => {
 
     // sending to Electron ->
     window.api.send("toMain", reviewSpreadsheet);
-
 });
 
 window.api.receive("fromMain", (data) => {

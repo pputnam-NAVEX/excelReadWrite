@@ -16,13 +16,13 @@ function updateDropdownValues(event) {
     document.getElementsByClassName("locationField");
     // Remove AND add value to other drop downs dynamically
     // console.log(event.target.value)
-    console.log(event.target.id);
+    // console.log(event.target.id);
     let currentDropDowns = document.getElementsByClassName("locationField");
     let currentValues = [];
     for (index = 0; index < currentDropDowns.length; index++) {
         currentValues.push(currentDropDowns[index].value)
     };
-    let nonChosenValues = [];
+    let nonChosenValues = {};
     for (option in dropDownOptions) {
         let found = false;
         for (value in currentValues) {
@@ -30,9 +30,10 @@ function updateDropdownValues(event) {
                 found = true;
             }
         }
-        (!found) ? nonChosenValues.push(dropDownOptions[option]) : null;
+        (!found) ? nonChosenValues[option] = dropDownOptions[option] : null;
     }
 
+    // removes value from other drop downs so it cannot also be chosen
     for (select = 0; select < currentDropDowns.length; select++) {
         for (option = 0; option < currentDropDowns[select].length; option++) {
             if (currentDropDowns[select].id != event.target.id) {
@@ -52,10 +53,18 @@ const addLocationFieldDropdown = function() {
         optionAlreadySelected.push(currentDropDowns[index].value)
     };
 
+    // need to more dynamically set id# as removing drop down later can cause duplicate id
     let newDropdown = document.createElement('select');
     numberOfFields++
     newDropdown.className = 'locationField';
     newDropdown.id = "field" + numberOfFields;
+
+    let removeDropdownButton = document.createElement('a');
+    removeDropdownButton.innerHTML = 'X';
+    removeDropdownButton.addEventListener("click", function() {
+        document.getElementById(newDropdown.id).remove();
+        this.remove();
+    });
 
     for (field in dropDownOptions) {
         let alreadyChosen = false;
@@ -74,6 +83,7 @@ const addLocationFieldDropdown = function() {
     }
     newDropdown.addEventListener("change", updateDropdownValues);
     document.getElementById('locationFieldDropdownContainer').appendChild(newDropdown);
+    document.getElementById('locationFieldDropdownContainer').appendChild(removeDropdownButton)
 
     // removes the default value from previous drop down
     for (select = 0; select < currentDropDowns.length-1; select++) {
