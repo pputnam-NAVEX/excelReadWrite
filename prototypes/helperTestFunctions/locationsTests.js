@@ -12,6 +12,7 @@ const alreadyInResults = (resultsArray, rowOrCell, key) => {
 }
 
 // primary function
+// this does specificity and system generated other
 const tests = {
     locationSpecificity: function(requestedFields, worksheetHeaderFields, worksheet) {
         let fieldsWithData = [];
